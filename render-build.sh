@@ -1,15 +1,21 @@
 #!/usr/bin/env bash
-# Exit on error
 set -o errexit
 
-echo "Installing Puppeteer dependencies..."
+# CRITICAL: Force Puppeteer to download Chrome INSIDE the project directory.
+# Render deletes $HOME/.cache between build and runtime phases.
+# Only files inside /opt/render/project/src/ survive to runtime.
+export PUPPETEER_CACHE_DIR="/opt/render/project/src/.cache/puppeteer"
 
-# Install all necessary shared libraries for Chrome on Debian/Ubuntu/Alpine depending on Render's base OS
-# Playwright's dependency installer is the most robust way to get all Chrome deps without hardcoding them
-npx playwright install-deps chromium
-
-# Download the chromium browser into the cache
-npx puppeteer browsers install chrome
+echo "=== PUPPETEER_CACHE_DIR set to: $PUPPETEER_CACHE_DIR ==="
 
 echo "Installing npm dependencies..."
 npm install
+
+echo "Installing Chrome browser into project cache..."
+npx puppeteer browsers install chrome
+
+echo "Verifying Chrome was installed..."
+ls -la "$PUPPETEER_CACHE_DIR/chrome/" || echo "WARNING: Chrome directory not found!"
+find "$PUPPETEER_CACHE_DIR" -name "chrome" -type f || echo "WARNING: Chrome binary not found!"
+
+echo "Build complete!"
