@@ -1,0 +1,9 @@
+{
+  "greetings": {
+    "welcome": "Namaste! 🙏 KARTA - business management tool. Hajur kun type ko business chalanu huncha?",
+    "languagePrompt": "1) Nepali (नेपाली)\n2) English\n3) Roman Nepali\n\nKripaya 1, 2 wa 3 likhnuhos"
+  },
+  "rephraseTeamSize": "Maaph garnuhos — ma ali farak tarikale sodchhu: Kati jana ko team cha? Approx bolnus.",
+  "menuTeamSize": "Kripaya ek chaanun: 1) 1-10 2) 11-50 3) 50+ 4) Prefer not to say",
+  "thanks": "Dhanyabaad!"
+}

@@ -1,0 +1,32 @@
+{
+  "messageCount": 0,
+  "totalUsers": 0,
+  "activeUsers": [
+    "9779804265296@c.us",
+    "156946762092781@lid"
+  ],
+  "startTime": 1771069937424,
+  "tasks": [],
+  "qrCode": null,
+  "lastQRTime": 1769835538908,
+  "pid": 13816,
+  "system": {
+    "cpu": 0,
+    "memory": 0,
+    "storage": 0
+  },
+  "outreach": {
+    "total": 1,
+    "success": 0,
+    "failed": 0,
+    "running": true
+  },
+  "commandQueue": [],
+  "running": true,
+  "whatsappConnected": false,
+  "uptime": 0,
+  "messageCache": {},
+  "profile": {
+    "name": "Default Bot"
+  }
+}

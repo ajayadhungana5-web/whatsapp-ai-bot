@@ -1,0 +1,83 @@
+node_modules/
+.env
+.env.local
+.DS_Store
+
+# WhatsApp session data (contains private auth tokens)
+.wwebjs_auth/
+.wwebjs_auth_backup/
+.wwebjs_cache/
+
+# Puppeteer / Chrome profiles
+.puppeteer_data/
+.god_mode_chrome_profile/
+
+# Logs
+*.log
+logs/
+npm-debug.log
+
+# Build outputs
+dist/
+build/
+coverage/
+
+# Audio / temp files generated at runtime
+*.mp3
+*.ogg
+*.wav
+temp_*
+*.ssml
+
+# Python virtual env
+.venv/
+
+# Data files with personal conversation history
+data/analytics-live.json
+data/selfLearningData.json
+data/intents.json
+data/tools.json
+data/errors.json
+data/key_status.json
+
+# Test / debug / demo files
+test*/
+Test*/
+test_*.js
+test-*.js
+test_*.py
+verify_*.js
+debug_*.js
+send_*.js
+validate_*.js
+reproduce_*.js
+godmode_*.js
+run_*.js
+comprehensive_*.js
+start_*.js
+trigger_*.js
+fix_*.js
+list-models.js
+manual_start.js
+restart_and_trigger.js
+START.bat
+*_TEST.js
+*_REPORT.md
+*_DEMONSTRATION.js
+*_COMPLETE.md
+*_GUIDE.md
+WhatsAppBotGodModeIntegration.js
+ENHANCED_*.md
+EXECUTOR_*.md
+GODMODE_*.md
+IMPLEMENTATION_*.md
+INTERACTIVE_*.js
+MOBILE_*.md
+OFFLINE_*.js
+QUICK_*.js
+README_GODMODE_*.md
+SOLUTION_*.js
+VERIFY_*.js
+FINAL_*.js
+DETACHED_*.md
+evaluation_report.md

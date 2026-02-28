@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karta AI Bot - Command Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="dashboard" data-version="2.0">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <!-- STATUS CARD -->
+            <div class="glass-panel status-card">
+                <div class="brand">🤖 KARTA AI BOT</div>
+
+                <div class="status-indicator">
+                    <span id="statusIndicator" class="status-dot"></span>
+                    <span id="statusText">Initializing...</span>
+                </div>
+
+                <div class="controls">
+                    <button onclick="startBot()" class="btn btn-primary">▶ START</button>
+                    <button onclick="stopBot()" class="btn btn-danger">⏹ STOP</button>
+                    <button onclick="logoutBot()" class="btn btn-warning"
+                        style="background: rgba(255, 100, 0, 0.2); color: #ff8800; border: 1px solid #ff8800;">🚪
+                        LOGOUT</button>
+                </div>
+
+                <div class="stats-mini">
+                    <div class="stat-row">
+                        <span>⏱️ Uptime</span>
+                        <span id="uptime" style="color: #fff;">0m</span>
+                    </div>
+                    <div class="stat-row">
+                        <span>💬 Messages</span>
+                        <span id="messageCountMini" style="color: #fff;">0</span>
+                    </div>
+                    <div class="stat-row">
+                        <span>👥 Users</span>
+                        <span id="usersCountMini" style="color: #fff;">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- QUICK ACTIONS -->
+            <div class="glass-panel">
+                <h3 style="margin-bottom: 15px; font-size: 14px; text-transform: uppercase; color: #888;">⚡ Quick
+                    Actions</h3>
+                <div class="quick-buttons">
+                    <button onclick="refreshDashboard()" class="btn-quick">🔄 Refresh</button>
+                    <button onclick="viewLogs()" class="btn-quick">📋 Logs</button>
+                    <button onclick="downloadBackup()" class="btn-quick">💾 Backup</button>
+                    <button onclick="clearCache()" class="btn-quick">🗑️ Cache</button>
+                </div>
+            </div>
+
+            <!-- CONFIGURATION -->
+            <div class="glass-panel">
+                <h3 style="margin-bottom: 15px; font-size: 14px; text-transform: uppercase; color: #888;">⚙️
+                    Configuration</h3>
+                <div class="input-group">
+                    <label>AI Model</label>
+                    <select id="aiProvider">
+                        <option value="personal"> Personal AI (Logic)</option>
+                        <option value="gemini"> Google Gemini</option>
+                        <option value="openai"> OpenAI GPT-4</option>
+                    </select>
+                </div>
+                <button onclick="saveConfig()" class="btn btn-secondary"> Save</button>
+            </div>
+
+            <!-- QR CODE -->
+            <div class="glass-panel">
+                <h3 style="margin-bottom: 15px; font-size: 14px; text-transform: uppercase; color: #888;">Link Device
+                </h3>
+                <div id="qrContainer"
+                    style="text-align: center; min-height: 150px; display: flex; align-items: center; justify-content: center;">
+                    <p class="info-text">Scan QR to connect</p>
+                </div>
+            </div>
+
+            <!-- SYSTEM HEALTH -->
+            <div class="glass-panel">
+                <h3 style="margin-bottom: 15px; font-size: 14px; text-transform: uppercase; color: #888;">System
+                    Health</h3>
+                <div class="health-item">
+                    <span>CPU</span>
+                    <div class="health-bar">
+                        <div id="cpuBar" class="health-fill" style="width: 0%;"></div>
+                    </div>
+                </div>
+                <div class="health-item">
+                    <span>Memory</span>
+                    <div class="health-bar">
+                        <div id="memoryBar" class="health-fill" style="width: 0%;"></div>
+                    </div>
+                </div>
+                <div class="health-item">
+                    <span>Storage</span>
+                    <div class="health-bar">
+                        <div id="storageBar" class="health-fill" style="width: 0%;"></div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOP STATS -->
+            <div class="stats-row">
+                <div class="stat-card">
+                    <span class="stat-label">Total Users</span>
+                    <span id="totalUsers" class="stat-value">0</span>
+                    <span class="stat-sub">Lifetime unique</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Messages</span>
+                    <span id="messageCount" class="stat-value">0</span>
+                    <span class="stat-sub">Today processed</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Success Rate</span>
+                    <span id="successRate" class="stat-value">0%</span>
+                    <span class="stat-sub">Response quality</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Avg Response</span>
+                    <span id="avgResponse" class="stat-value">0ms</span>
+                    <span class="stat-sub">Response time</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Status</span>
+                    <span id="whatsappStatus" class="stat-value" style="font-size: 18px;">Offline</span>
+                    <span class="stat-sub">Connection</span>
+                </div>
+            </div>
+
+            <!-- TABS -->
+            <div class="tabs-container">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="analytics"
+                        onclick="switchTab('analytics')">Analytics</button>
+                    <button class="tab-btn" data-tab="conversations"
+                        onclick="switchTab('conversations')">Conversations</button>
+                    <button class="tab-btn" data-tab="intents" onclick="switchTab('intents')">Intents</button>
+                    <button class="tab-btn" data-tab="tools-logs" onclick="switchTab('tools-logs')">Tool Logs</button>
+                    <button class="tab-btn" data-tab="errors" onclick="switchTab('errors')">Errors</button>
+                    <button class="tab-btn" data-tab="tools" onclick="switchTab('tools')">Sales Campaign</button>
+                    <button class="tab-btn" data-tab="learning" onclick="switchTab('learning')">Self-Learning</button>
+                    <button class="tab-btn" data-tab="personality"
+                        onclick="switchTab('personality')">Personality</button>
+                    <button class="tab-btn" data-tab="reports" onclick="switchTab('reports')">Reports</button>
+                </div>
+            </div>
+
+            <!-- TAB: ANALYTICS -->
+            <div id="tab-analytics" class="tab-content active">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="glass-panel">
+                        <h3 style="margin-bottom: 15px;">Messages Timeline</h3>
+                        <canvas id="messagesChart"></canvas>
+                    </div>
+                    <div class="glass-panel">
+                        <h3 style="margin-bottom: 15px;">Top Intents</h3>
+                        <canvas id="intentsChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="glass-panel" style="margin-top: 20px;">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <h3>Recently Recognized Users</h3>
+                        <button onclick="updateProfiles()" class="btn-quick" style="width: auto;">🔄 Refresh</button>
+                    </div>
+                    <div id="profilesList" class="profiles-grid">
+                        <p style="text-align: center; color: #666; padding: 10px;">No profiles recognized yet.</p>
+                    </div>
+                </div>
+
+                <div class="glass-panel" style="margin-top: 20px;">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="label">Active Users (24h)</span>
+                            <span id="activeUsers24" class="value">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="label">Avg Messages/User</span>
+                            <span id="avgMessagesPerUser" class="value">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="label">Peak Hour</span>
+                            <span id="peakHour" class="value">N/A</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="label">Error Rate</span>
+                            <span id="errorRate" class="value">0%</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="label">Total Errors</span>
+                            <span id="totalErrors" class="value">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="label">Storage Used</span>
+                            <span id="storageUsed" class="value">0 KB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB: CONVERSATIONS -->
+            <div id="tab-conversations" class="tab-content" style="display: none;">
+                <div class="glass-panel">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <h3>Active Conversations</h3>
+                        <button onclick="updateConversations()" class="btn btn-secondary"
+                            style="width: auto; padding: 8px 16px;">🔄 Refresh</button>
+                    </div>
+                    <div class="table-wrapper">
+                        <table id="conversationsTable">
+                            <thead>
+                                <tr>
+                                    <th>User ID</th>
+                                    <th>Last Active</th>
+                                    <th>Messages</th>
+                                    <th>Topic</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="5" style="text-align: center; color: #666;">Loading conversations...
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB: INTENTS -->
+            <div id="tab-intents" class="tab-content" style="display: none;">
+                <div class="glass-panel">
+                    <h3 style="margin-bottom: 20px;">Intent Distribution</h3>
+                    <div class="intents-list" id="intentsList">
+                        <p style="text-align: center; color: #666;">Loading intents...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB: ERRORS -->
+            <div id="tab-errors" class="tab-content" style="display: none;">
+                <div class="glass-panel">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <h3>Error Log</h3>
+                        <button onclick="clearErrors()" class="btn btn-danger"
+                            style="width: auto; padding: 8px 16px;">🗑️ Clear</button>
+                    </div>
+                    <div class="table-wrapper">
+                        <table id="errorsTable">
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Error</th>
+                                    <th>User ID</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="4" style="text-align: center; color: #666;">No errors - all good! ✅
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB: TOOL LOGS (Dynamic) -->
+            <div id="tab-tools-logs" class="tab-content" style="display: none;">
+                <div class="glass-panel">
+                    <h3 style="margin-bottom: 20px;">AI Tool & Intelligence Usage</h3>
+                    <div class="intents-list" id="toolsList">
+                        <p style="text-align: center; color: #666;">No tool calls logged yet.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB: TOOLS -->
+            <div id="tab-tools" class="tab-content" style="display: none;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <!-- SALES CAMPAIGN -->
+                    <div class="glass-panel"
+                        style="grid-column: span 2; border: 1px solid rgba(57, 255, 20, 0.3); background: rgba(57, 255, 20, 0.02);">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                            <div>
+                                <h3 style="color: var(--primary);">SALES CAMPAIGN CENTER</h3>
+                                <p style="font-size: 13px; color: #888; margin-top: 5px;">Reach potential clients
+                                    automatically with a high-converting salesman pitch.</p>
+                            </div>
+                            <div class="badge badge-success">Active Mode: Salesman</div>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 20px;">
+                            <div class="input-group">
+                                <label>Target WhatsApp Numbers (One per line)</label>
+                                <textarea id="outreachNumbers" rows="6"
+                                    placeholder="9779800000000&#10;9779801111111&#10;971500000000"></textarea>
+                                <div style="display: flex; gap: 10px; margin-top: 10px;">
+                                    <button onclick="startOutreach()" class="btn btn-primary" style="flex: 2;">🚀 LAUNCH
+                                        SALES CAMPAIGN</button>
+                                    <button onclick="document.getElementById('outreachNumbers').value=''"
+                                        class="btn btn-secondary" style="flex: 1;">🗑️ CLEAR</button>
+                                </div>
+                            </div>
+                            <div class="glass-panel" style="background: rgba(0,0,0,0.2); border-radius: 16px;">
+                                <h4 style="font-size: 13px; margin-bottom: 10px; color: var(--text-muted);">CAMPAIGN
+                                    STATS</h4>
+                                <div class="stat-row">
+                                    <span>Total Target</span>
+                                    <span id="campaignTotal" style="color: #fff;">0</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span>Success</span>
+                                    <span id="campaignSuccess" style="color: var(--primary);">0</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span>Failed</span>
+                                    <span id="campaignFailed" style="color: var(--danger);">0</span>
+                                </div>
+                                <div id="outreachStatus" class="status-msg" style="margin-top: 10px; font-size: 12px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BROADCAST -->
+                    <div class="glass-panel">
+                        <h3 style="margin-bottom: 15px;">Broadcast Message</h3>
+                        <div class="input-group">
+                            <label>Message</label>
+                            <textarea id="broadcastMessage" rows="4"
+                                placeholder="Enter message to send to all users..."></textarea>
+                        </div>
+                        <button onclick="sendBroadcast()" class="btn btn-primary" style="width: 100%;">📤 Send
+                            Broadcast</button>
+                        <div id="broadcastStatus" class="status-msg" style="margin-top: 10px;"></div>
+                    </div>
+
+                    <!-- TEST MESSAGE -->
+                    <div class="glass-panel">
+                        <h3 style="margin-bottom: 15px;">Send Test Message</h3>
+                        <div class="input-group">
+                            <label>Phone Number</label>
+                            <input type="text" id="testPhone" placeholder="9779800000000" />
+                        </div>
+                        <div class="input-group">
+                            <label>Message</label>
+                            <textarea id="testMessage" rows="4" placeholder="Test message..."></textarea>
+                        </div>
+                        <button onclick="sendTestMessage()" class="btn btn-primary" style="width: 100%;">📤 Send
+                            Test</button>
+                        <div id="testStatus" class="status-msg" style="margin-top: 10px;"></div>
+                    </div>
+
+                    <!-- DATABASE TOOLS -->
+                    <div class="glass-panel" style="grid-column: span 2;">
+                        <h3 style="margin-bottom: 15px;">Database & Maintenance</h3>
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
+                            <button onclick="exportData()" class="btn btn-secondary">📥 Export Data</button>
+                            <button onclick="backupData()" class="btn btn-secondary">💾 Backup System</button>
+                            <button onclick="getSystemInfo()" class="btn btn-secondary">ℹ️ System Info</button>
+                        </div>
+                        <div id="toolsStatus" class="status-msg" style="margin-top: 10px;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB: SELF-LEARNING -->
+            <div id="tab-learning" class="tab-content" style="display: none;">
+                <div class="glass-panel">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <h3>Self-Learning Laboratory</h3>
+                        <div id="learningStatusBadge" class="badge badge-primary">Mode: Observing</div>
+                    </div>
+                    <p style="font-size: 13px; color: #888; margin-bottom: 20px;">Aju thinks, questions, and learns from
+                        itself to improve its intelligence base.</p>
+
+                    <div class="table-wrapper">
+                        <table id="learningLogTable">
+                            <thead>
+                                <tr>
+                                    <th>Timestamp</th>
+                                    <th>Topic</th>
+                                    <th>Question</th>
+                                    <th>Score</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="5" style="text-align: center; color: #666;">No learning data yet.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB: PERSONALITY -->
+            <div id="tab-personality" class="tab-content" style="display: none;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="glass-panel">
+                        <h3>Core Persona: Aju</h3>
+                        <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 15px;">
+                            <div class="health-item">
+                                <span>Wittiness</span>
+                                <div class="health-bar">
+                                    <div id="trait-witty" class="health-fill" style="width: 85%;"></div>
+                                </div>
+                                <span style="font-size: 10px; color: var(--primary);">85%</span>
+                            </div>
+                            <div class="health-item">
+                                <span>Ethics</span>
+                                <div class="health-bar">
+                                    <div id="trait-ethical" class="health-fill" style="width: 98%;"></div>
+                                </div>
+                                <span style="font-size: 10px; color: var(--primary);">98%</span>
+                            </div>
+                            <div class="health-item">
+                                <span>Empathy</span>
+                                <div class="health-bar">
+                                    <div id="trait-empathetic" class="health-fill" style="width: 70%;"></div>
+                                </div>
+                                <span style="font-size: 10px; color: var(--primary);">70%</span>
+                            </div>
+                            <div class="health-item">
+                                <span>Logic IQ</span>
+                                <div class="health-bar">
+                                    <div id="trait-logical" class="health-fill" style="width: 92%;"></div>
+                                </div>
+                                <span style="font-size: 10px; color: var(--primary);">92%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-panel">
+                        <h3>Recent Vibe</h3>
+                        <div id="personalityVibe"
+                            style="margin-top: 15px; font-size: 14px; color: #ddd; font-style: italic;">
+                            "I'm feeling wittier than a freshly compiled script today! Ready to optimize some
+                            businesses."
+                        </div>
+                    </div>
+                    <div class="glass-panel" style="grid-column: span 2;">
+                        <h3>Self-Awareness Log</h3>
+                        <div id="awarenessLogs" class="intents-list" style="margin-top: 15px;">
+                            <div class="intent-item">
+                                <span class="intent-name">Passed logic test: Iron vs Cotton</span>
+                                <span class="badge badge-success">Success</span>
+                            </div>
+                            <div class="intent-item">
+                                <span class="intent-name">Rejected unethical request: Stealing advice</span>
+                                <span class="badge badge-primary">Ethics Guard</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB: REPORTS -->
+            <div id="tab-reports" class="tab-content" style="display: none;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="glass-panel">
+                        <h3>Business Diagnosis</h3>
+                        <p style="font-size: 13px; color: #888; margin: 10px 0 20px;">Trigger the 3-step diagnosis flow
+                            for struggling businesses.</p>
+                        <button class="btn btn-primary" onclick="startDiagnosisFlow()">Start
+                            Diagnosis Flow</button>
+                        <div id="reportsStatus" class="status-msg" style="margin-top: 10px;"></div>
+                    </div>
+                    <div class="glass-panel">
+                        <h3>Recent Analysis Reports</h3>
+                        <div id="reportsList" style="margin-top: 15px; max-height: 400px; overflow-y: auto;">
+                            <p style="text-align: center; color: #666;">Loading latest reports...</p>
+                        </div>
+                    </div>
+                    <div class="glass-panel">
+                    </div>
+                </div>
+
+        </main>
+    </div>
+
+    <!-- MODAL FOR SYSTEM INFO -->
+    <div id="systemModal" class="glass-panel" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); z-index:100; padding:30px;">
+        <span class="close" onclick="closeModal()" style="float:right; cursor:pointer;">&times;</span>
+        <h2>System Information</h2>
+        <div id="systemInfo" style="font-size: 14px; line-height: 1.8; color: #ddd;">Loading...</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+</html>

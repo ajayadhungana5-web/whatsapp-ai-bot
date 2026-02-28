@@ -1,0 +1,37 @@
+services:
+  - type: web
+    name: whatsapp-ai-bot
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node src/server.js
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
+      - key: AI_PROVIDER
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: OPENROUTER_BACKUP_API_KEY
+        sync: false
+      - key: AUTO_REPLY_ENABLED
+        value: "true"
+      - key: RESPONSE_TIMEOUT
+        value: "30000"
+      - key: LOG_LEVEL
+        value: "info"
+      - key: LOCAL_STORAGE_ENABLED
+        value: "true"
+      - key: DATA_PERSISTENCE_DIR
+        value: "./data"
+      - key: RATE_LIMIT_ENABLED
+        value: "true"
+      - key: RATE_LIMIT_MESSAGES_PER_MINUTE
+        value: "20"

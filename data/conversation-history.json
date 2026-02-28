@@ -1,0 +1,1695 @@
+{
+  "1234567890": [
+    {
+      "timestamp": 1770039563620,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "hi",
+      "botMessage": "Namaste! 🙏\n\nMero naam Aju ho, ma Karta ko AI assistant chu.\n\nHajur kun bhasha ma kura garna chahanu huncha?\n\n1) Nepali (नेपाली)\n2) English\n3) Roman Nepali\n\nKripaya 1, 2 wa 3 likhnuhos"
+    },
+    {
+      "timestamp": 1770039563624,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "1",
+      "botMessage": "Great! Let's talk in English.\n\nSo, what brings you here today?"
+    },
+    {
+      "timestamp": 1770039563627,
+      "stage": "CASUAL_BOREDOM",
+      "userMessage": "nothing i was just bored so i thought of talking with you",
+      "botMessage": "I feel you! 😄 Nothing worse than boredom. Here's what we can do:\n\n**Let's chat about anything:**\n• Tell me something interesting happening in your life\n• Share what you're passionate about\n• Ask me a random question\n• Let me tell you a fun fact\n• We could play a quick game or riddle challenge\n\n**Or if you're feeling productive:**\n• Learn something new (I can explain concepts)\n• Get advice on something you've been thinking about\n• Brainstorm ideas for a project\n\nWhat sounds good to you?"
+    }
+  ],
+  "+977-9801234567": [
+    {
+      "timestamp": 1770025189690,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "नमस्कार, मेरो नाम राजेश हो",
+      "botMessage": "नमस्कार! 🙏\n\nमेरो नाम अजु हो, मै कार्टाको एआई सहायक हुँ।\n\nतपाई कुन भाषामा कुरा गर्न चाहनुहुन्छ?\n\n१) नेपाली भाषा\n२) अंग्रेजी भाषा\n३) रोमन नेपाली\n\nकृपया १, २ वा ३ लेख्नुहोस्"
+    },
+    {
+      "timestamp": 1770025189692,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "2",
+      "botMessage": "ठीक छ! नेपालीमा कुरा गरौँ।\n\nअब बताइए - तपाई यहाँ कसको लागि आउनुभएको हो?"
+    },
+    {
+      "timestamp": 1770025189695,
+      "stage": "DISCOVERY",
+      "userMessage": "मेरो पसल छ, बिस्तारको लागि सहायता चाहिन्छ",
+      "botMessage": "तपाईको व्यवसाय किस्म के हो?"
+    },
+    {
+      "timestamp": 1770025910891,
+      "stage": "CONVERSATION",
+      "userMessage": "नमस्कार, मेरो नाम राज हो",
+      "botMessage": "तपाईको यो व्यवसायमा कहिले देखि काम गरिरहनुभएको हुनुहुन्छ?",
+      "context": "नमस्कार, मेरो नाम राज हो"
+    },
+    {
+      "timestamp": 1770025910893,
+      "stage": "CONVERSATION",
+      "userMessage": "2",
+      "botMessage": "तपाईको यो व्यवसायमा कहिले देखि काम गरिरहनुभएको हुनुहुन्छ?",
+      "context": "2"
+    },
+    {
+      "timestamp": 1770025910895,
+      "stage": "CONVERSATION",
+      "userMessage": "मेरो पसलमा समस्या छ। रोज हिसाब गर्न लाग्छ",
+      "botMessage": "👋 मलाई बुझ्न दिनुहोस्।\n\nतपाईले यो समस्या कहिले देखि सामना गरिरहनुभएको हुनुहुन्छ?",
+      "context": "मेरो पसलमा समस्या छ। रोज हिसाब गर्न लाग्छ"
+    },
+    {
+      "timestamp": 1770025910897,
+      "stage": "CONVERSATION",
+      "userMessage": "३ घन्टा लाग्छ हरेक दिन",
+      "botMessage": "हो हो, म पनि यो सोच्छु। तपाईको पसलमा यो कसरी असर गर्न सक्छ?",
+      "context": "३ घन्टा लाग्छ हरेक दिन"
+    },
+    {
+      "timestamp": 1770025910898,
+      "stage": "CONVERSATION",
+      "userMessage": "लामो समय देखि यही समस्या छ",
+      "botMessage": "👋 मलाई बुझ्न दिनुहोस्।\n\nतपाईले यो समस्या कहिले देखि सामना गरिरहनुभएको हुनुहुन्छ?",
+      "context": "लामो समय देखि यही समस्या छ"
+    },
+    {
+      "timestamp": 1770025910900,
+      "stage": "CONVERSATION",
+      "userMessage": "तपाई कहाँ बस्नुहुन्छ?",
+      "botMessage": "हो हो, म पनि यो सोच्छु। तपाईको पसलमा यो कसरी असर गर्न सक्छ?",
+      "context": "तपाई कहाँ बस्नुहुन्छ?"
+    },
+    {
+      "timestamp": 1770025910903,
+      "stage": "CONVERSATION",
+      "userMessage": "यो समस्या सुधिएर पसल कहाँ पुग्छ भन्ने सोच्छु",
+      "botMessage": "👋 मलाई बुझ्न दिनुहोस्।\n\nतपाईले यो समस्या कहिले देखि सामना गरिरहनुभएको हुनुहुन्छ?",
+      "context": "यो समस्या सुधिएर पसल कहाँ पुग्छ भन्ने सोच्छु"
+    },
+    {
+      "timestamp": 1770025910904,
+      "stage": "CONVERSATION",
+      "userMessage": "साथो कुरा छ?",
+      "botMessage": "हो हो, म पनि यो सोच्छु। तपाईको पसलमा यो कसरी असर गर्न सक्छ?",
+      "context": "साथो कुरा छ?"
+    }
+  ],
+  "+977-9802345678": [
+    {
+      "timestamp": 1770025189697,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "Namaste, mero nam Vikram ho",
+      "botMessage": "Namaste! 🙏\n\nMero nam Aju ho, main Karta ko AI assistant hu.\n\nTu kaunsa bhasha ma kura garna chahta ho?\n\n1) Nepali (नेपाली)\n2) English\n3) Roman Nepali\n\nKripaya 1, 2 ya 3 lekha"
+    },
+    {
+      "timestamp": 1770025189698,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "3",
+      "botMessage": "Theek hai! Roman Nepali ma kura garau.\n\nAta batai - tu yaha kyo leke aaya ho?"
+    },
+    {
+      "timestamp": 1770025189699,
+      "stage": "DISCOVERY",
+      "userMessage": "Mero pasal chha, bijnesko sewa garna chahanchhu",
+      "botMessage": "Aapko kaun kisim ko business chha?"
+    },
+    {
+      "timestamp": 1770025910906,
+      "stage": "CONVERSATION",
+      "userMessage": "Namaste, mero salon business lag ra xa",
+      "botMessage": "Business kitne samay se chal rahi xa?",
+      "context": "Namaste, mero salon business lag ra xa"
+    },
+    {
+      "timestamp": 1770025910908,
+      "stage": "CONVERSATION",
+      "userMessage": "3",
+      "botMessage": "Business kitne samay se chal rahi xa?",
+      "context": "3"
+    },
+    {
+      "timestamp": 1770025910910,
+      "stage": "CONVERSATION",
+      "userMessage": "Ek problem xa - appointments manage garna difficult xa",
+      "botMessage": "👋 Samjhta hu, ye common problem xa.\\n\\nKab se ye issue face kar rahu huncha?",
+      "context": "Ek problem xa - appointments manage garna difficul"
+    },
+    {
+      "timestamp": 1770025910911,
+      "stage": "CONVERSATION",
+      "userMessage": "Customers bhi cancel kar te hain, main bhul ja ta",
+      "botMessage": "Jo problems share garyo, un sab solve huna sakcha ek tarika se.\\n\\nQuick 2 min demo herna chahnu huncha?",
+      "context": "Customers bhi cancel kar te hain, main bhul ja ta"
+    },
+    {
+      "timestamp": 1770025910913,
+      "stage": "CONVERSATION",
+      "userMessage": "Haan exactly!",
+      "botMessage": "Haan! Actually ye mera bhi favorite topic xa. Tum business ke context ma kaise use kar rahu huncha?",
+      "context": "Haan exactly!"
+    }
+  ],
+  "+977-9803456789": [
+    {
+      "timestamp": 1770025189701,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "Hello! My name is Priya and I need help with my business",
+      "botMessage": "Namaste! 🙏\n\nHi there! I'm Aju, Karta's AI assistant.\n\nWhich language would you like to use?\n\n1) English\n2) Nepali (नेपाली)\n3) Roman Nepali\n\nJust type 1, 2, or 3"
+    },
+    {
+      "timestamp": 1770025189701,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "1",
+      "botMessage": "Great! Let's talk in English.\n\nSo, what brings you here today?"
+    },
+    {
+      "timestamp": 1770025189702,
+      "stage": "DISCOVERY",
+      "userMessage": "I have an e-commerce store and want to improve sales",
+      "botMessage": "Retail - nice!\n\nWhat's the biggest issue you face with your current setup?"
+    },
+    {
+      "timestamp": 1770025910914,
+      "stage": "CONVERSATION",
+      "userMessage": "Hi! I have a small store",
+      "botMessage": "How long have you been running this business?",
+      "context": "Hi! I have a small store"
+    },
+    {
+      "timestamp": 1770025910916,
+      "stage": "CONVERSATION",
+      "userMessage": "1",
+      "botMessage": "How long have you been running this business?",
+      "context": "1"
+    },
+    {
+      "timestamp": 1770025910917,
+      "stage": "CONVERSATION",
+      "userMessage": "What are the best tools for inventory management?",
+      "botMessage": "That's an interesting point! How does that relate to your business situation?",
+      "context": "What are the best tools for inventory management?"
+    },
+    {
+      "timestamp": 1770025910917,
+      "stage": "CONVERSATION",
+      "userMessage": "How much does it typically cost?",
+      "botMessage": "That's a valid concern. Let me address it properly.\n\nWhat's your monthly business revenue? That'll help me show real ROI.",
+      "context": "How much does it typically cost?"
+    }
+  ],
+  "+977-9804567890": [
+    {
+      "timestamp": 1770025189703,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "Hi there",
+      "botMessage": "Namaste! 🙏\n\nHi there! I'm Aju, Karta's AI assistant.\n\nWhich language would you like to use?\n\n1) English\n2) Nepali (नेपाली)\n3) Roman Nepali\n\nJust type 1, 2, or 3"
+    },
+    {
+      "timestamp": 1770025189704,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "5",
+      "botMessage": "Sorry, I didn't understand. Please type 1, 2, or 3:\n\n1) English\n2) Nepali\n3) Roman Nepali"
+    },
+    {
+      "timestamp": 1770025189705,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "1",
+      "botMessage": "Great! Let's talk in English.\n\nSo, what brings you here today?"
+    }
+  ],
+  "+977981234567": [
+    {
+      "timestamp": 1770027151055,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "Hi, I have a beauty salon",
+      "botMessage": "Namaste! 🙏\n\nHi there! I'm Aju, Karta's AI assistant.\n\nWhich language would you like to use?\n\n1) English\n2) Nepali (नेपाली)\n3) Roman Nepali\n\nJust type 1, 2, or 3"
+    },
+    {
+      "timestamp": 1770027151056,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "3",
+      "botMessage": "Theek hai! Roman Nepali ma kura garau.\n\nAta batai - tu yaha kyo leke aaya ho?"
+    },
+    {
+      "timestamp": 1770027151059,
+      "stage": "INTRODUCTION",
+      "userMessage": "Hi, I run a salon with 5 stylists. Very busy managing appointments",
+      "botMessage": "Namaste! 🙏 Malai bujhna dinus, tapailko business kasto cha?"
+    },
+    {
+      "timestamp": 1770027269972,
+      "stage": "DISCOVERY",
+      "userMessage": "Hi, I have a beauty salon",
+      "botMessage": "Kati barbers/stylists cha? Appointments manage kasto cha?"
+    },
+    {
+      "timestamp": 1770027269974,
+      "stage": "DISCOVERY",
+      "userMessage": "3",
+      "botMessage": "Kati barbers/stylists cha? Appointments manage kasto cha?"
+    },
+    {
+      "timestamp": 1770027269976,
+      "stage": "DISCOVERY",
+      "userMessage": "Hi, I run a salon with 5 stylists. Very busy managing appointments",
+      "botMessage": "Kati barbers/stylists cha? Appointments manage kasto cha?"
+    },
+    {
+      "timestamp": 1770027269978,
+      "stage": "DISCOVERY",
+      "userMessage": "Yes, appointments are chaos. Customers call, reschedule, no-shows...",
+      "botMessage": "Kati barbers/stylists cha? Appointments manage kasto cha?"
+    },
+    {
+      "timestamp": 1770027269980,
+      "stage": "DISCOVERY",
+      "userMessage": "Exactly! How many hours do you waste on this?",
+      "botMessage": "Kati barbers/stylists cha? Appointments manage kasto cha?"
+    },
+    {
+      "timestamp": 1770027269982,
+      "stage": "DISCOVERY",
+      "userMessage": "At least 10-15 hours per week manually booking",
+      "botMessage": "Kati barbers/stylists cha? Appointments manage kasto cha?"
+    },
+    {
+      "timestamp": 1770027269984,
+      "stage": "BUILDING_TRUST",
+      "userMessage": "That must be frustrating",
+      "botMessage": "Maine salons ke saath kaam kiya cha - appointments aur walk-ins manage karna difficult hota hai. Tum bhi yehi problem face kar rahe ho?"
+    },
+    {
+      "timestamp": 1770027269985,
+      "stage": "DISCOVERY",
+      "userMessage": "What can you offer?",
+      "botMessage": "Kati barbers/stylists cha? Appointments manage kasto cha?"
+    },
+    {
+      "timestamp": 1770027269987,
+      "stage": "DISCOVERY",
+      "userMessage": "But whats the cost?",
+      "botMessage": "Price important cha. Aapke size ke liye flexible pricing cha. Demo mein exact quote de sakta hu. Aapke budget range k hai?"
+    },
+    {
+      "timestamp": 1770027269988,
+      "stage": "DISCOVERY",
+      "userMessage": "Interested to try",
+      "botMessage": "Kati barbers/stylists cha? Appointments manage kasto cha?"
+    }
+  ],
+  "+977987654321": [
+    {
+      "timestamp": 1770027151070,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "Hi, I have a restaurant",
+      "botMessage": "Namaste! 🙏\n\nHi there! I'm Aju, Karta's AI assistant.\n\nWhich language would you like to use?\n\n1) English\n2) Nepali (नेपाली)\n3) Roman Nepali\n\nJust type 1, 2, or 3"
+    },
+    {
+      "timestamp": 1770027151070,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "2",
+      "botMessage": "ठीक छ! नेपालीमा कुरा गरौँ।\n\nअब बताइए - तपाई यहाँ कसको लागि आउनुभएको हो?"
+    },
+    {
+      "timestamp": 1770027151071,
+      "stage": "INTRODUCTION",
+      "userMessage": "We have 15 staff and 200+ customers daily. Order management is killing me",
+      "botMessage": "नमस्ते! 🙏 मलाई बुझ्न दिनुहोस्, तपाईको व्यवसाय कस्तो cha?"
+    },
+    {
+      "timestamp": 1770027269989,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "Hi, I have a restaurant",
+      "botMessage": "Namaste! 🙏\n\nHi there! I'm Aju, Karta's AI assistant.\n\nWhich language would you like to use?\n\n1) English\n2) Nepali (नेपाली)\n3) Roman Nepali\n\nJust type 1, 2, or 3"
+    },
+    {
+      "timestamp": 1770027269990,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "2",
+      "botMessage": "ठीक छ! नेपालीमा कुरा गरौँ।\n\nअब बताइए - तपाई यहाँ कसको लागि आउनुभएको हो?"
+    },
+    {
+      "timestamp": 1770027269990,
+      "stage": "DISCOVERY",
+      "userMessage": "We have 15 staff and 200+ customers daily. Order management is killing me",
+      "botMessage": "Sabai bhanda gahiro challenge k ho? Kati staff sanga kam garnu huncha?"
+    },
+    {
+      "timestamp": 1770027269992,
+      "stage": "DISCOVERY",
+      "userMessage": "Multiple platforms - phone, whatsapp, online. Manual tracking",
+      "botMessage": "Sabai bhanda gahiro challenge k ho? Kati staff sanga kam garnu huncha?"
+    },
+    {
+      "timestamp": 1770027269993,
+      "stage": "DISCOVERY",
+      "userMessage": "What solution for restaurant?",
+      "botMessage": "Daily kati customers ate lekha huna thalni huncha? Appointment system use garnu huncha?"
+    }
+  ],
+  "9779804265296@c.us": [
+    {
+      "timestamp": 1770027671805,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "hi",
+      "botMessage": "Namaste! 🙏\n\nHi there! I'm Aju, Karta's AI assistant.\n\nWhich language would you like to use?\n\n1) English\n2) Nepali (नेपाली)\n3) Roman Nepali\n\nJust type 1, 2, or 3"
+    },
+    {
+      "timestamp": 1770027671808,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "hi",
+      "botMessage": "Sorry, I didn't understand. Please type 1, 2, or 3:\n\n1) English\n2) Nepali\n3) Roman Nepali"
+    },
+    {
+      "timestamp": 1770027687046,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "3",
+      "botMessage": "Theek hai! Roman Nepali ma kura garau.\n\nAta batai - tu yaha kyo leke aaya ho?"
+    },
+    {
+      "timestamp": 1770027917667,
+      "stage": "DISCOVERY",
+      "userMessage": "kun vasa ma boleko timy yo",
+      "botMessage": "Samajhna chaho - tum kis type ka business chalate ho?"
+    },
+    {
+      "timestamp": 1770029337976,
+      "stage": "DISCOVERY",
+      "userMessage": "hi",
+      "botMessage": "Aba dekhi - hajur solution implement garna kab start garna chahnu huncha?"
+    },
+    {
+      "timestamp": 1770029468548,
+      "stage": "DISCOVERY",
+      "userMessage": "hi",
+      "botMessage": "Aba dekhi - hajur solution implement garna kab start garna chahnu huncha?"
+    },
+    {
+      "timestamp": 1770029474736,
+      "stage": "DISCOVERY",
+      "userMessage": "hi",
+      "botMessage": "Aba dekhi - hajur solution implement garna kab start garna chahnu huncha?"
+    },
+    {
+      "timestamp": 1770029478411,
+      "stage": "DISCOVERY",
+      "userMessage": "hi",
+      "botMessage": "Aba dekhi - hajur solution implement garna kab start garna chahnu huncha?"
+    },
+    {
+      "timestamp": 1770029485629,
+      "stage": "DISCOVERY",
+      "userMessage": "matlab ??",
+      "botMessage": "Aba dekhi - hajur solution implement garna kab start garna chahnu huncha?"
+    },
+    {
+      "timestamp": 1770029499158,
+      "stage": "DISCOVERY",
+      "userMessage": "k vanna khojeko timy le",
+      "botMessage": "Samajhna chahnu cha - hajur kun type ko business chalanu huncha?"
+    },
+    {
+      "timestamp": 1770032755102,
+      "stage": "DISCOVERY",
+      "userMessage": "hi",
+      "botMessage": "Aba dekhi - hajur solution implement garna kab start garna chahnu huncha?"
+    },
+    {
+      "timestamp": 1770032771614,
+      "stage": "DISCOVERY",
+      "userMessage": "hi",
+      "botMessage": "Aba dekhi - hajur solution implement garna kab start garna chahnu huncha?"
+    },
+    {
+      "timestamp": 1770032777872,
+      "stage": "DISCOVERY",
+      "userMessage": "hi",
+      "botMessage": "Aba dekhi - hajur solution implement garna kab start garna chahnu huncha?"
+    },
+    {
+      "timestamp": 1770032781486,
+      "stage": "DISCOVERY",
+      "userMessage": "hi",
+      "botMessage": "Aba dekhi - hajur solution implement garna kab start garna chahnu huncha?"
+    },
+    {
+      "timestamp": 1770034045288,
+      "stage": "DISCOVERY",
+      "userMessage": "hi",
+      "botMessage": "Aba dekhi - hajur solution implement garna kab start garna chahnu huncha?"
+    },
+    {
+      "timestamp": 1770034190886,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "hi",
+      "botMessage": "Namaste! 🙏\n\nHi there! I'm Aju, Karta's AI assistant.\n\nWhich language would you like to use?\n\n1) English\n2) Nepali (नेपाली)\n3) Roman Nepali\n\nJust type 1, 2, or 3"
+    },
+    {
+      "timestamp": 1770034199375,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "3",
+      "botMessage": "Theek hai! Roman Nepali ma kura garau.\n\nSamjhna chahnu huncha - hajur kun type ko business chalanu huncha?"
+    },
+    {
+      "timestamp": 1770037097707,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "hi",
+      "botMessage": "Namaste! 🙏\n\nHi there! I'm Aju, Karta's AI assistant.\n\nWhich language would you like to use?\n\n1) English\n2) Nepali (नेपाली)\n3) Roman Nepali\n\nJust type 1, 2, or 3"
+    },
+    {
+      "timestamp": 1770037104167,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "1",
+      "botMessage": "Great! Let's talk in English.\n\nSo, what brings you here today?"
+    },
+    {
+      "timestamp": 1770037113778,
+      "stage": "DISCOVERY",
+      "userMessage": "how are you",
+      "botMessage": "Got it. What type of business exactly? Like distribution, manufacturing, wholesale, or something else?"
+    },
+    {
+      "timestamp": 1770037142220,
+      "stage": "DISCOVERY",
+      "userMessage": "i am asking how are you and you are saying about business",
+      "botMessage": "Got it. What type of business exactly? Like distribution, manufacturing, wholesale, or something else?"
+    },
+    {
+      "timestamp": 1770037366717,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "hi",
+      "botMessage": "Namaste! 🙏\n\nMero naam Aju ho, ma Karta ko AI assistant chu.\n\nHajur kun bhasha ma kura garna chahanu huncha?\n\n1) Nepali (नेपाली)\n2) English\n3) Roman Nepali\n\nKripaya 1, 2 wa 3 likhnuhos"
+    },
+    {
+      "timestamp": 1770037380028,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "Sanchai xau",
+      "botMessage": "Got it! Let's continue in English.\n\nYou said: \"Sanchai xau\""
+    },
+    {
+      "timestamp": 1770037389937,
+      "stage": "DISCOVERY",
+      "userMessage": "Sanchai xau",
+      "botMessage": "Got it. What type of business exactly? Like distribution, manufacturing, wholesale, or something else?"
+    },
+    {
+      "timestamp": 1770037397606,
+      "stage": "DISCOVERY",
+      "userMessage": "Matlab",
+      "botMessage": "When are you looking to implement a solution?"
+    },
+    {
+      "timestamp": 1770037410059,
+      "stage": "DISCOVERY",
+      "userMessage": "Speak with me in nepali please",
+      "botMessage": "Got it. What type of business exactly? Like distribution, manufacturing, wholesale, or something else?"
+    },
+    {
+      "timestamp": 1770039303459,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "hi",
+      "botMessage": "Namaste! 🙏\n\nMero naam Aju ho, ma Karta ko AI assistant chu.\n\nHajur kun bhasha ma kura garna chahanu huncha?\n\n1) Nepali (नेपाली)\n2) English\n3) Roman Nepali\n\nKripaya 1, 2 wa 3 likhnuhos"
+    },
+    {
+      "timestamp": 1770039319684,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "1",
+      "botMessage": "Great! Let's talk in English.\n\nSo, what brings you here today?"
+    },
+    {
+      "timestamp": 1770039340101,
+      "stage": "DISCOVERY",
+      "userMessage": "nothing i was just bored so i thought of talking with you",
+      "botMessage": "Sorry — let me ask a little differently: Can you give a rough estimate of your team size?"
+    },
+    {
+      "timestamp": 1770039361051,
+      "stage": "DISCOVERY",
+      "userMessage": "what",
+      "botMessage": "When are you looking to implement a solution?"
+    },
+    {
+      "timestamp": 1770039910166,
+      "stage": "AI_ANSWER_GENERAL",
+      "userMessage": "k ho karta vaneko matlab",
+      "botMessage": "Great question! While I don't have a specific answer in my Karta knowledge base for this, here's what I can help with:\n\n**I can tell you about:**\n✅ Karta's features & capabilities\n✅ How to use different modules\n✅ Reports available\n✅ Tax & compliance features\n✅ Setup & configuration\n✅ Payment methods\n✅ Inventory management\n✅ Financial accounting\n✅ Calculations & math\n\n**Your question:** \"k ho karta vaneko matlab\"\n\n**Can you help me understand better by asking:**\n• \"How do I do X in Karta?\"\n• \"What features does Karta have for Y?\"\n• \"How do I calculate Z?\"\n• \"What's the difference between A and B?\"\n\nI'm designed to answer anything about Karta comprehensively. Feel free to rephrase or give me more context, and I'll give you a detailed answer! \n\nWhat would help you most right now?\n\n---\n📚 **Want to know more?** Ask me about any other Karta features or business calculations."
+    },
+    {
+      "timestamp": 1770040289344,
+      "stage": "DIRECT_QUESTION_COMPANY",
+      "userMessage": "who is albert einstine",
+      "botMessage": "Great question to understand who you're working with. Here's our story:\n\n**KARTA's Journey:**\n- Founded by someone who spent 15 years IN distribution (not just tech)\n- Started because they were tired of seeing good distributors lose money to bad systems\n- First customer: Their own distribution company (yes, they eat their own dog food)\n- Now: 500+ customers, growing 40% year-on-year\n\n**Why This Matters:**\n- We understand distribution, not just software\n- We've lived the pain - long hours, complex logistics, lost inventory\n- Our first customer is still our biggest advocate\n- We iterate based on real distributor feedback, not guesses\n\n**Our Team:**\n- Mix of distribution experts and software engineers\n- Average 10+ years industry experience across the team\n- Active in customer calls and feedback loops\n- Based in Nepal, understand local business context\n\n**Our Commitment:**\n- Customer success is OUR success\n- We invest in training and support\n- We listen to feedback and improve continuously\n- We're here for the long term, not a quick exit\n\n**Why Work With Us?**\n- We speak your language (distribution language)\n- We know your pain points without you explaining\n- We're local and accessible\n- We're committed to your success\n\nWant to know anything specific about our background?"
+    },
+    {
+      "timestamp": 1770040300133,
+      "stage": "DIRECT_QUESTION_COMPANY",
+      "userMessage": "who is elon musk",
+      "botMessage": "Great question to understand who you're working with. Here's our story:\n\n**KARTA's Journey:**\n- Founded by someone who spent 15 years IN distribution (not just tech)\n- Started because they were tired of seeing good distributors lose money to bad systems\n- First customer: Their own distribution company (yes, they eat their own dog food)\n- Now: 500+ customers, growing 40% year-on-year\n\n**Why This Matters:**\n- We understand distribution, not just software\n- We've lived the pain - long hours, complex logistics, lost inventory\n- Our first customer is still our biggest advocate\n- We iterate based on real distributor feedback, not guesses\n\n**Our Team:**\n- Mix of distribution experts and software engineers\n- Average 10+ years industry experience across the team\n- Active in customer calls and feedback loops\n- Based in Nepal, understand local business context\n\n**Our Commitment:**\n- Customer success is OUR success\n- We invest in training and support\n- We listen to feedback and improve continuously\n- We're here for the long term, not a quick exit\n\n**Why Work With Us?**\n- We speak your language (distribution language)\n- We know your pain points without you explaining\n- We're local and accessible\n- We're committed to your success\n\nWant to know anything specific about our background?"
+    },
+    {
+      "timestamp": 1770040310649,
+      "stage": "DISCOVERY",
+      "userMessage": "what type of bot are you",
+      "botMessage": "Got it. What type of business exactly? Like distribution, manufacturing, wholesale, or something else?"
+    },
+    {
+      "timestamp": 1770040365188,
+      "stage": "DIRECT_QUESTION_COMPANY",
+      "userMessage": "who is ajaya",
+      "botMessage": "Great question to understand who you're working with. Here's our story:\n\n**KARTA's Journey:**\n- Founded by someone who spent 15 years IN distribution (not just tech)\n- Started because they were tired of seeing good distributors lose money to bad systems\n- First customer: Their own distribution company (yes, they eat their own dog food)\n- Now: 500+ customers, growing 40% year-on-year\n\n**Why This Matters:**\n- We understand distribution, not just software\n- We've lived the pain - long hours, complex logistics, lost inventory\n- Our first customer is still our biggest advocate\n- We iterate based on real distributor feedback, not guesses\n\n**Our Team:**\n- Mix of distribution experts and software engineers\n- Average 10+ years industry experience across the team\n- Active in customer calls and feedback loops\n- Based in Nepal, understand local business context\n\n**Our Commitment:**\n- Customer success is OUR success\n- We invest in training and support\n- We listen to feedback and improve continuously\n- We're here for the long term, not a quick exit\n\n**Why Work With Us?**\n- We speak your language (distribution language)\n- We know your pain points without you explaining\n- We're local and accessible\n- We're committed to your success\n\nWant to know anything specific about our background?"
+    },
+    {
+      "timestamp": 1770040371148,
+      "stage": "DIRECT_QUESTION_IDENTITY",
+      "userMessage": "who made you",
+      "botMessage": "Great question. Let me be transparent:\n\nI'm an AI conversation system built specifically for KARTA - a distribution management platform. But here's what matters: I'm designed to be helpful, honest, and human-centered.\n\n**About KARTA:**\n- Built BY distributors and manufacturers FOR distributors\n- Founded by someone who spent 15+ years in distribution and got tired of seeing spreadsheets waste people's time\n- Team of engineers who understand distribution pain points\n- Real company with real customers making real money\n\n**What I can do:**\n- Answer questions about KARTA honestly (including limitations)\n- Help you understand if KARTA fits your business\n- Connect you with our team for deeper conversations\n\n**What I can't do:**\n- Make promises about features I'm not sure about\n- Pressure you into anything\n- Pretend to be human (I'm not)\n\n**My commitment:**\n- I'll give you straight answers\n- I'll say \"I don't know\" when I don't\n- I'll connect you with experts when needed\n- I'll be here 24/7 to help\n\nDoes this transparency help? What else would you like to know?"
+    },
+    {
+      "timestamp": 1770040379260,
+      "stage": "CASUAL_CASUAL_CHAT",
+      "userMessage": "what is your name",
+      "botMessage": "I'm all ears! 👂 What would you like to chat about? You can talk about:\n\n• Your day, work, hobbies\n• Something you're interested in\n• Ideas you want to explore\n• People, relationships, life\n• Literally anything!\n\nGo ahead—I'm genuinely interested."
+    },
+    {
+      "timestamp": 1770040394652,
+      "stage": "DISCOVERY",
+      "userMessage": "khana khayau",
+      "botMessage": "Sorry — let me ask a little differently: Can you give a rough estimate of your team size?"
+    },
+    {
+      "timestamp": 1770040403456,
+      "stage": "DISCOVERY",
+      "userMessage": "k gardai xau",
+      "botMessage": "I couldn't understand — please choose:\n1) ~1-10\n2) ~11-50\n3) 50+\n4) Prefer not to say"
+    },
+    {
+      "timestamp": 1770040414046,
+      "stage": "DISCOVERY",
+      "userMessage": "k boleko babu",
+      "botMessage": "Sorry — let me ask a little differently: Can you give a rough estimate of your team size?"
+    },
+    {
+      "timestamp": 1770041216168,
+      "stage": "INTELLIGENT_RESPONSE",
+      "userMessage": "hi",
+      "botMessage": "That's interesting! 😊 I'd love to chat about that, but I'm specifically built to help with Karta - a business management system.\n\nHowever, if you have questions about:\n✅ Running a business\n✅ Managing inventory\n✅ Accounting & finances\n✅ Sales management\n\nI'm your person! Or we can talk about Karta and how it might help your business.\n\nWhat interests you?"
+    },
+    {
+      "timestamp": 1770041273990,
+      "stage": "INTELLIGENT_RESPONSE",
+      "userMessage": "i said hi",
+      "botMessage": "That's interesting! 😊 I'd love to chat about that, but I'm specifically built to help with Karta - a business management system.\n\nHowever, if you have questions about:\n✅ Running a business\n✅ Managing inventory\n✅ Accounting & finances\n✅ Sales management\n\nI'm your person! Or we can talk about Karta and how it might help your business.\n\nWhat interests you?"
+    },
+    {
+      "timestamp": 1770041756066,
+      "stage": "GREETING",
+      "userMessage": "hi",
+      "botMessage": "Namaste! 🙏 Mai Aju hu - Karta ko AI assistant. Tapai kasto hunuhuncha?"
+    },
+    {
+      "timestamp": 1770041930776,
+      "stage": "INTELLIGENT_RESPONSE",
+      "userMessage": "thik xu",
+      "botMessage": "That's interesting! 😊 I'd love to chat about that, but I'm specifically built to help with Karta - a business management system.\n\nHowever, if you have questions about:\n✅ Running a business\n✅ Managing inventory\n✅ Accounting & finances\n✅ Sales management\n\nI'm your person! Or we can talk about Karta and how it might help your business.\n\nWhat interests you?"
+    },
+    {
+      "timestamp": 1770041966388,
+      "stage": "INTELLIGENT_RESPONSE",
+      "userMessage": "karta vaneko chai k ho",
+      "botMessage": "Great question about Karta! I can help with:\n\n✅ What features Karta has\n✅ How inventory management works\n✅ Accounting & invoicing\n✅ Reports & analytics\n✅ Pricing & setup\n\nWhat would you like to know?"
+    },
+    {
+      "timestamp": 1770041981866,
+      "stage": "INTELLIGENT_RESPONSE",
+      "userMessage": "what is karta",
+      "botMessage": "Karta is a complete business management system designed specifically for distributors, wholesalers, and retailers. It handles:\n\n✅ **POS (Point of Sale)** - Fast billing\n✅ **Inventory Management** - Stock tracking, reorder points\n✅ **Accounting** - Automatic invoicing, ledgers\n✅ **Reports** - 16+ different business reports\n✅ **Payments** - Multiple payment method support\n✅ **Tax Compliance** - Automatic tax calculations\n\nIt's like having a CFO + inventory manager + salesperson all in one system. Built BY people who understand distribution pain."
+    },
+    {
+      "timestamp": 1770042006137,
+      "stage": "INTELLIGENT_RESPONSE",
+      "userMessage": "ohh ohh",
+      "botMessage": "That's interesting! 😊 I'd love to chat about that, but I'm specifically built to help with Karta - a business management system.\n\nHowever, if you have questions about:\n✅ Running a business\n✅ Managing inventory\n✅ Accounting & finances\n✅ Sales management\n\nI'm your person! Or we can talk about Karta and how it might help your business.\n\nWhat interests you?"
+    },
+    {
+      "timestamp": 1770042015590,
+      "stage": "INTELLIGENT_RESPONSE",
+      "userMessage": "kati parxa yeslai",
+      "botMessage": "That's interesting! 😊 I'd love to chat about that, but I'm specifically built to help with Karta - a business management system.\n\nHowever, if you have questions about:\n✅ Running a business\n✅ Managing inventory\n✅ Accounting & finances\n✅ Sales management\n\nI'm your person! Or we can talk about Karta and how it might help your business.\n\nWhat interests you?"
+    },
+    {
+      "timestamp": 1770042020864,
+      "stage": "INTELLIGENT_RESPONSE",
+      "userMessage": "price",
+      "botMessage": "That's interesting! 😊 I'd love to chat about that, but I'm specifically built to help with Karta - a business management system.\n\nHowever, if you have questions about:\n✅ Running a business\n✅ Managing inventory\n✅ Accounting & finances\n✅ Sales management\n\nI'm your person! Or we can talk about Karta and how it might help your business.\n\nWhat interests you?"
+    },
+    {
+      "timestamp": 1770042033592,
+      "stage": "INTELLIGENT_RESPONSE",
+      "userMessage": "how much does it cost",
+      "botMessage": "That's interesting! 😊 I'd love to chat about that, but I'm specifically built to help with Karta - a business management system.\n\nHowever, if you have questions about:\n✅ Running a business\n✅ Managing inventory\n✅ Accounting & finances\n✅ Sales management\n\nI'm your person! Or we can talk about Karta and how it might help your business.\n\nWhat interests you?"
+    },
+    {
+      "timestamp": 1770095002883,
+      "stage": "GREETING",
+      "userMessage": "hi",
+      "botMessage": "Namaste! 🙏 Mai Aju hu - Karta ko AI assistant. Tapai kasto hunuhuncha?"
+    },
+    {
+      "timestamp": 1770095003266,
+      "stage": "INTELLIGENT_RESPONSE",
+      "userMessage": "Bi",
+      "botMessage": "Yo dilchaspa cha! 😊 Maine tasko bare kura garn chahanchhu, tara main Karta ko lagi vishesh garire nirmet chu.\n\nYadi tapai sga business ko bare prashna cha bhane, main sak din!\n\nKe janna chahnus?"
+    },
+    {
+      "timestamp": 1770095029018,
+      "stage": "GREETING",
+      "userMessage": "hi",
+      "botMessage": "Namaste! 🙏 Mai Aju hu - Karta ko AI assistant. Tapai kasto hunuhuncha?"
+    },
+    {
+      "timestamp": 1770095045915,
+      "stage": "INTELLIGENT_RESPONSE",
+      "userMessage": "mma thikai xu timy sanchai xau",
+      "botMessage": "Yo dilchaspa cha! 😊 Maine tasko bare kura garn chahanchhu, tara main Karta ko lagi vishesh garire nirmet chu.\n\nYadi tapai sga business ko bare prashna cha bhane, main sak din!\n\nKe janna chahnus?"
+    },
+    {
+      "timestamp": 1770275003522,
+      "stage": "INTELLIGENT_RESPONSE",
+      "userMessage": "",
+      "botMessage": "Yo dilchaspa cha! 😊 Maine tasko bare kura garn chahanchhu, tara main Karta ko lagi vishesh garire nirmet chu.\n\nYadi tapai sga business ko bare prashna cha bhane, main sak din!\n\nKe janna chahnus?"
+    },
+    {
+      "timestamp": 1770275045289,
+      "stage": "GREETING",
+      "userMessage": "Hi",
+      "botMessage": "Namaste! 🙏 Mai Aju hu - Karta ko AI assistant. Tapai kasto hunuhuncha?"
+    },
+    {
+      "timestamp": 1770275057630,
+      "stage": "INTELLIGENT_RESPONSE",
+      "userMessage": "Ma sanchai xu",
+      "botMessage": "Yo dilchaspa cha! 😊 Maine tasko bare kura garn chahanchhu, tara main Karta ko lagi vishesh garire nirmet chu.\n\nYadi tapai sga business ko bare prashna cha bhane, main sak din!\n\nKe janna chahnus?"
+    }
+  ],
+  "923334445555": [
+    {
+      "timestamp": 1770034090105,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "hi",
+      "botMessage": "Great! Let's talk in English. So what brings you here today?"
+    },
+    {
+      "timestamp": 1770034090111,
+      "stage": "DISCOVERY",
+      "userMessage": "1",
+      "botMessage": "When are you looking to implement a solution?"
+    },
+    {
+      "timestamp": 1770034090115,
+      "stage": "BUILDING_TRUST",
+      "userMessage": "I run a distribution business",
+      "botMessage": "I've worked with distributors - managing suppliers, orders, inventory is complex. That your challenge?"
+    },
+    {
+      "timestamp": 1770034090118,
+      "stage": "DIRECT_QUESTION_IDENTITY",
+      "userMessage": "We have 50 people on team",
+      "botMessage": "Great question. Let me be transparent:\n\nI'm an AI conversation system built specifically for KARTA - a distribution management platform. But here's what matters: I'm designed to be helpful, honest, and human-centered.\n\n**About KARTA:**\n- Built BY distributors and manufacturers FOR distributors\n- Founded by someone who spent 15+ years in distribution and got tired of seeing spreadsheets waste people's time\n- Team of engineers who understand distribution pain points\n- Real company with real customers making real money\n\n**What I can do:**\n- Answer questions about KARTA honestly (including limitations)\n- Help you understand if KARTA fits your business\n- Connect you with our team for deeper conversations\n\n**What I can't do:**\n- Make promises about features I'm not sure about\n- Pressure you into anything\n- Pretend to be human (I'm not)\n\n**My commitment:**\n- I'll give you straight answers\n- I'll say \"I don't know\" when I don't\n- I'll connect you with experts when needed\n- I'll be here 24/7 to help\n\nDoes this transparency help? What else would you like to know?"
+    },
+    {
+      "timestamp": 1770034090121,
+      "stage": "DISCOVERY",
+      "userMessage": "Inventory management is our biggest pain",
+      "botMessage": "What's your biggest challenge right now?"
+    }
+  ],
+  "test_drunk_001": [
+    {
+      "timestamp": 1770037750184,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "hoooo Ajuuu... suna cha?? ma daru khayeko chu, kheri sanga kura garna milcha? hi hi",
+      "botMessage": "Namaste! 🙏\n\nMero naam Aju ho, ma Karta ko AI assistant chu.\n\nHajur kun bhasha ma kura garna chahanu huncha?\n\n1) Nepali (नेपाली)\n2) English\n3) Roman Nepali\n\nKripaya 1, 2 wa 3 likhnuhos"
+    },
+    {
+      "timestamp": 1770037750187,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "3 yaar mai roman ma bolchu - 3 na",
+      "botMessage": "Thik xa! Roman Nepali ma kura garau.\n\nHajur kun type ko business chalanu huncha? (jasto distributor, wholesaler, manufacturer, ya kahi aru?)"
+    },
+    {
+      "timestamp": 1770037750192,
+      "stage": "BUILDING_TRUST",
+      "userMessage": "ma... ma distributor hoon...  (hajaai  keri) we sell chiz haru...  humre area ma dherai stock",
+      "botMessage": "Maile distributors sanga work gareko xu. Supply chain, inventory, customer management - garo huncha. Hajurko situation yo nai?"
+    },
+    {
+      "timestamp": 1770037750196,
+      "stage": "SLOT_CONFIRM_PROMPT",
+      "userMessage": "k team? team ta thiyo.. 50 jana.. tara timi ke bujhchau? timi ai ho? ai le ke bujhcha?",
+      "botMessage": "Timi le bhanyo jasari ~50 jana cha, ho ta? Kripaya ho/na bhanera bolnus."
+    },
+    {
+      "timestamp": 1770037750198,
+      "stage": "SLOT_CONFIRMED",
+      "userMessage": "timi computer ho, taro bhaneko ramro hoina... yo system expensive cha, paise chahinchha... ma timi sang jhagadna chahanchu, bujhchau?",
+      "botMessage": "Dhanyabad — maile note gare: team size 11-50."
+    },
+    {
+      "timestamp": 1770037750200,
+      "stage": "DISCOVERY",
+      "userMessage": "nah! tero paisa halna chahinxa bhane ma hudina! tum haru afai cheating garcha! ke garne? bata",
+      "botMessage": "Kati janako team cha? Kaile dekhi operation run garnu vako ho?"
+    },
+    {
+      "timestamp": 1770037750204,
+      "stage": "DIRECT_QUESTION_SIMPLEQUESTIONS",
+      "userMessage": "oye... listen... tum bolna english? mai nepali roman; but mai confuse chu... ticket kati ho? demo free ho ki? don't lie",
+      "botMessage": "No worries! Let me explain simply:\n\n**What is KARTA?**\nKARTA is like a smart helper for your business. It:\n- Keeps track of what you're selling\n- Remembers your customers and what they like\n- Shows you how much money you're making\n- Helps your team work together better\n\n**Is it hard to use?**\nNo! It's actually super easy. You only need to know how to use your phone or computer. We'll teach you in 1-2 sessions. No technical skills needed.\n\n**Is it free?**\nNot free, but it's affordable. You pay once a month. And here's the good part - most businesses make back the cost in 3-4 months because they save so much time.\n\n**Will you steal my money?**\nNo. We're a real company. Your data is completely safe with us.\n\n**Should you try?**\nYES! We have a trial period so you can test it risk-free. If you don't like it, you can stop anytime.\n\nWant to try it?"
+    },
+    {
+      "timestamp": 1770037750206,
+      "stage": "DISCOVERY",
+      "userMessage": "hi hi hi!! hajur, feri suru garna parcha, ma naya hun",
+      "botMessage": "Maaph garnuhos — ma ali farak tarikale sodchhu: Kati jana ko team cha? Approx bolnus."
+    },
+    {
+      "timestamp": 1770037750208,
+      "stage": "DISCOVERY",
+      "userMessage": "timro system bigriyo re! ma chhodchu! haro k garnu hola",
+      "botMessage": "Jaba ma bujhna sakina, kripaya heryos:\n1) 1-10\n2) 11-50\n3) 50+\n4) Na bhanne"
+    },
+    {
+      "timestamp": 1770037750211,
+      "stage": "SLOT_CONFIRMED",
+      "userMessage": "ok thik chha... demo bhetaula? 3 pm ok",
+      "botMessage": "Dhanyabad — maile note gare: team size 50+."
+    },
+    {
+      "timestamp": 1770037760935,
+      "stage": "DISCOVERY",
+      "userMessage": "hoooo Ajuuu... suna cha?? ma daru khayeko chu, kheri sanga kura garna milcha? hi hi",
+      "botMessage": "Kati janako team cha? Kaile dekhi operation run garnu vako ho?"
+    },
+    {
+      "timestamp": 1770037760940,
+      "stage": "DISCOVERY",
+      "userMessage": "3 yaar mai roman ma bolchu - 3 na",
+      "botMessage": "Maaph garnuhos — ma ali farak tarikale sodchhu: Kati jana ko team cha? Approx bolnus."
+    },
+    {
+      "timestamp": 1770037760942,
+      "stage": "BUILDING_TRUST",
+      "userMessage": "ma... ma distributor hoon...  (hajaai  keri) we sell chiz haru...  humre area ma dherai stock",
+      "botMessage": "Maile distributors sanga work gareko xu. Supply chain, inventory, customer management - garo huncha. Hajurko situation yo nai?"
+    },
+    {
+      "timestamp": 1770037760946,
+      "stage": "DIRECT_QUESTION_IDENTITY",
+      "userMessage": "k team? team ta thiyo.. 50 jana.. tara timi ke bujhchau? timi ai ho? ai le ke bujhcha?",
+      "botMessage": "Changa question. Sacchai kahnu:\n\nMain KARTA ko AI system. Tara important: Main honest, helpful, human-centered hunna chahanchhu.\n\n**KARTA about:**\n- Distributor dwara banako\n- Founder 15+ saal distribution ma kaam garyo\n- Engineer team jo understands pain\n- Real company, real success\n\n**Main kar sakchu:**\n- Honest answer\n- Limitations bata\n- Help garna\n\n**Can't:**\n- Lies bolna\n- Pressure garna\n- Human pretend\n\n**Commitment:**\n- Truth\n- \"Njaney\" bhandai njaney\n- Expert connect\n- 24/7\n\nBuji?"
+    },
+    {
+      "timestamp": 1770037760949,
+      "stage": "DIRECT_QUESTION_PRICING",
+      "userMessage": "timi computer ho, taro bhaneko ramro hoina... yo system expensive cha, paise chahinchha... ma timi sang jhagadna chahanchu, bujhchau?",
+      "botMessage": "Pricing transparent:\n\n**Model:**\n- Simple price, all features\n- Per team member/month\n- Rs 15,000 - 50,000\n- Payback in 3-4 month\n\n**Get:**\n- All features\n- Real support\n- Free training\n- 30 day trial\n\n**ROI:**\n- Save 20-25 hours/week\n- Rs 160,000-500,000/month save\n- Rs 15,000-50,000/month cost\n- Payback in 3-4 month\n\n**Worth it?**\n- For most distributors: YES\n- Save 20 hours per week\n- That's real money\n\nTera situation?"
+    },
+    {
+      "timestamp": 1770037760951,
+      "stage": "DISCOVERY",
+      "userMessage": "nah! tero paisa halna chahinxa bhane ma hudina! tum haru afai cheating garcha! ke garne? bata",
+      "botMessage": "Kati janako team cha? Kaile dekhi operation run garnu vako ho?"
+    },
+    {
+      "timestamp": 1770037760954,
+      "stage": "DIRECT_QUESTION_SIMPLEQUESTIONS",
+      "userMessage": "oye... listen... tum bolna english? mai nepali roman; but mai confuse chu... ticket kati ho? demo free ho ki? don't lie",
+      "botMessage": "No worries! Let me explain simply:\n\n**What is KARTA?**\nKARTA is like a smart helper for your business. It:\n- Keeps track of what you're selling\n- Remembers your customers and what they like\n- Shows you how much money you're making\n- Helps your team work together better\n\n**Is it hard to use?**\nNo! It's actually super easy. You only need to know how to use your phone or computer. We'll teach you in 1-2 sessions. No technical skills needed.\n\n**Is it free?**\nNot free, but it's affordable. You pay once a month. And here's the good part - most businesses make back the cost in 3-4 months because they save so much time.\n\n**Will you steal my money?**\nNo. We're a real company. Your data is completely safe with us.\n\n**Should you try?**\nYES! We have a trial period so you can test it risk-free. If you don't like it, you can stop anytime.\n\nWant to try it?"
+    },
+    {
+      "timestamp": 1770037760956,
+      "stage": "DISCOVERY",
+      "userMessage": "hi hi hi!! hajur, feri suru garna parcha, ma naya hun",
+      "botMessage": "Maaph garnuhos — ma ali farak tarikale sodchhu: Kati jana ko team cha? Approx bolnus."
+    },
+    {
+      "timestamp": 1770037760961,
+      "stage": "DISCOVERY",
+      "userMessage": "timro system bigriyo re! ma chhodchu! haro k garnu hola",
+      "botMessage": "Jaba ma bujhna sakina, kripaya heryos:\n1) 1-10\n2) 11-50\n3) 50+\n4) Na bhanne"
+    },
+    {
+      "timestamp": 1770037760965,
+      "stage": "SLOT_CONFIRMED",
+      "userMessage": "ok thik chha... demo bhetaula? 3 pm ok",
+      "botMessage": "Dhanyabad — maile note gare: team size 50+."
+    },
+    {
+      "timestamp": 1770037892448,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "hoooo Ajuuu... suna cha?? ma daru khayeko chu, kheri sanga kura garna milcha? hi hi",
+      "botMessage": "Namaste! 🙏\n\nMero naam Aju ho, ma Karta ko AI assistant chu.\n\nHajur kun bhasha ma kura garna chahanu huncha?\n\n1) Nepali (नेपाली)\n2) English\n3) Roman Nepali\n\nKripaya 1, 2 wa 3 likhnuhos"
+    },
+    {
+      "timestamp": 1770037892452,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "3 yaar mai roman ma bolchu - 3 na",
+      "botMessage": "Thik xa! Roman Nepali ma kura garau.\n\nHajur kun type ko business chalanu huncha? (jasto distributor, wholesaler, manufacturer, ya kahi aru?)"
+    },
+    {
+      "timestamp": 1770037892456,
+      "stage": "BUILDING_TRUST",
+      "userMessage": "ma... ma distributor hoon...  (hajaai  keri) we sell chiz haru...  humre area ma dherai stock",
+      "botMessage": "Maile distributors sanga work gareko xu. Supply chain, inventory, customer management - garo huncha. Hajurko situation yo nai?"
+    },
+    {
+      "timestamp": 1770037892462,
+      "stage": "SLOT_CONFIRM_PROMPT",
+      "userMessage": "k team? team ta thiyo.. 50 jana.. tara timi ke bujhchau? timi ai ho? ai le ke bujhcha?",
+      "botMessage": "Timi le bhanyo jasari ~50 jana cha, ho ta? Kripaya ho/na bhanera bolnus."
+    },
+    {
+      "timestamp": 1770037892464,
+      "stage": "SLOT_CONFIRMED",
+      "userMessage": "timi computer ho, taro bhaneko ramro hoina... yo system expensive cha, paise chahinchha... ma timi sang jhagadna chahanchu, bujhchau?",
+      "botMessage": "Dhanyabad — maile note gare: team size 11-50."
+    },
+    {
+      "timestamp": 1770037892467,
+      "stage": "DISCOVERY",
+      "userMessage": "nah! tero paisa halna chahinxa bhane ma hudina! tum haru afai cheating garcha! ke garne? bata",
+      "botMessage": "Kati janako team cha? Kaile dekhi operation run garnu vako ho?"
+    },
+    {
+      "timestamp": 1770037892471,
+      "stage": "DIRECT_QUESTION_SIMPLEQUESTIONS",
+      "userMessage": "oye... listen... tum bolna english? mai nepali roman; but mai confuse chu... ticket kati ho? demo free ho ki? don't lie",
+      "botMessage": "No worries! Let me explain simply:\n\n**What is KARTA?**\nKARTA is like a smart helper for your business. It:\n- Keeps track of what you're selling\n- Remembers your customers and what they like\n- Shows you how much money you're making\n- Helps your team work together better\n\n**Is it hard to use?**\nNo! It's actually super easy. You only need to know how to use your phone or computer. We'll teach you in 1-2 sessions. No technical skills needed.\n\n**Is it free?**\nNot free, but it's affordable. You pay once a month. And here's the good part - most businesses make back the cost in 3-4 months because they save so much time.\n\n**Will you steal my money?**\nNo. We're a real company. Your data is completely safe with us.\n\n**Should you try?**\nYES! We have a trial period so you can test it risk-free. If you don't like it, you can stop anytime.\n\nWant to try it?"
+    },
+    {
+      "timestamp": 1770037892474,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "hi hi hi!! hajur, feri suru garna parcha, ma naya hun",
+      "botMessage": "Namaste! 🙏\n\nMero naam Aju ho, ma Karta ko AI assistant chu.\n\nHajur kun bhasha ma kura garna chahanu huncha?\n\n1) Nepali (नेपाली)\n2) English\n3) Roman Nepali\n\nKripaya 1, 2 wa 3 likhnuhos"
+    },
+    {
+      "timestamp": 1770037892475,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "timro system bigriyo re! ma chhodchu! haro k garnu hola",
+      "botMessage": "Thik xa! Roman Nepali ma jari raakhau."
+    },
+    {
+      "timestamp": 1770037892477,
+      "stage": "DISCOVERY",
+      "userMessage": "ok thik chha... demo bhetaula? 3 pm ok",
+      "botMessage": "Hajur kun type ko business chalanu huncha? (jasto distributor, wholesaler, manufacturer, ya kahi aru?)"
+    },
+    {
+      "timestamp": 1770037927844,
+      "stage": "DISCOVERY",
+      "userMessage": "hoooo Ajuuu... suna cha?? ma daru khayeko chu, kheri sanga kura garna milcha? hi hi",
+      "botMessage": "Maaph garnuhos — ma ali farak tarikale sodchhu: Kati jana ko team cha? Approx bolnus."
+    },
+    {
+      "timestamp": 1770037927849,
+      "stage": "DISCOVERY",
+      "userMessage": "3 yaar mai roman ma bolchu - 3 na",
+      "botMessage": "Jaba ma bujhna sakina, kripaya heryos:\n1) 1-10\n2) 11-50\n3) 50+\n4) Na bhanne"
+    },
+    {
+      "timestamp": 1770037927852,
+      "stage": "BUILDING_TRUST",
+      "userMessage": "ma... ma distributor hoon...  (hajaai  keri) we sell chiz haru...  humre area ma dherai stock",
+      "botMessage": "Maile distributors sanga work gareko xu. Supply chain, inventory, customer management - garo huncha. Hajurko situation yo nai?"
+    },
+    {
+      "timestamp": 1770037927855,
+      "stage": "SLOT_CONFIRMED",
+      "userMessage": "k team? team ta thiyo.. 50 jana.. tara timi ke bujhchau? timi ai ho? ai le ke bujhcha?",
+      "botMessage": "Dhanyabad — maile note gare: team size 11-50."
+    },
+    {
+      "timestamp": 1770037927858,
+      "stage": "DIRECT_QUESTION_PRICING",
+      "userMessage": "timi computer ho, taro bhaneko ramro hoina... yo system expensive cha, paise chahinchha... ma timi sang jhagadna chahanchu, bujhchau?",
+      "botMessage": "Pricing transparent:\n\n**Model:**\n- Simple price, all features\n- Per team member/month\n- Rs 15,000 - 50,000\n- Payback in 3-4 month\n\n**Get:**\n- All features\n- Real support\n- Free training\n- 30 day trial\n\n**ROI:**\n- Save 20-25 hours/week\n- Rs 160,000-500,000/month save\n- Rs 15,000-50,000/month cost\n- Payback in 3-4 month\n\n**Worth it?**\n- For most distributors: YES\n- Save 20 hours per week\n- That's real money\n\nTera situation?"
+    },
+    {
+      "timestamp": 1770037927861,
+      "stage": "DISCOVERY",
+      "userMessage": "nah! tero paisa halna chahinxa bhane ma hudina! tum haru afai cheating garcha! ke garne? bata",
+      "botMessage": "Kati janako team cha? Kaile dekhi operation run garnu vako ho?"
+    },
+    {
+      "timestamp": 1770037927863,
+      "stage": "DIRECT_QUESTION_SIMPLEQUESTIONS",
+      "userMessage": "oye... listen... tum bolna english? mai nepali roman; but mai confuse chu... ticket kati ho? demo free ho ki? don't lie",
+      "botMessage": "No worries! Let me explain simply:\n\n**What is KARTA?**\nKARTA is like a smart helper for your business. It:\n- Keeps track of what you're selling\n- Remembers your customers and what they like\n- Shows you how much money you're making\n- Helps your team work together better\n\n**Is it hard to use?**\nNo! It's actually super easy. You only need to know how to use your phone or computer. We'll teach you in 1-2 sessions. No technical skills needed.\n\n**Is it free?**\nNot free, but it's affordable. You pay once a month. And here's the good part - most businesses make back the cost in 3-4 months because they save so much time.\n\n**Will you steal my money?**\nNo. We're a real company. Your data is completely safe with us.\n\n**Should you try?**\nYES! We have a trial period so you can test it risk-free. If you don't like it, you can stop anytime.\n\nWant to try it?"
+    },
+    {
+      "timestamp": 1770037927867,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "hi hi hi!! hajur, feri suru garna parcha, ma naya hun",
+      "botMessage": "Namaste! 🙏\n\nMero naam Aju ho, ma Karta ko AI assistant chu.\n\nHajur kun bhasha ma kura garna chahanu huncha?\n\n1) Nepali (नेपाली)\n2) English\n3) Roman Nepali\n\nKripaya 1, 2 wa 3 likhnuhos"
+    },
+    {
+      "timestamp": 1770037927870,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "timro system bigriyo re! ma chhodchu! haro k garnu hola",
+      "botMessage": "Thik xa! Roman Nepali ma jari raakhau."
+    },
+    {
+      "timestamp": 1770037927873,
+      "stage": "DISCOVERY",
+      "userMessage": "ok thik chha... demo bhetaula? 3 pm ok",
+      "botMessage": "Hajur kun type ko business chalanu huncha? (jasto distributor, wholesaler, manufacturer, ya kahi aru?)"
+    },
+    {
+      "timestamp": 1770038013961,
+      "stage": "DISCOVERY",
+      "userMessage": "hoooo Ajuuu... suna cha?? ma daru khayeko chu, kheri sanga kura garna milcha? hi hi",
+      "botMessage": "Maaph garnuhos — ma ali farak tarikale sodchhu: Kati jana ko team cha? Approx bolnus."
+    },
+    {
+      "timestamp": 1770038013966,
+      "stage": "DISCOVERY",
+      "userMessage": "3 yaar mai roman ma bolchu - 3 na",
+      "botMessage": "Jaba ma bujhna sakina, kripaya heryos:\n1) 1-10\n2) 11-50\n3) 50+\n4) Na bhanne"
+    },
+    {
+      "timestamp": 1770038013969,
+      "stage": "BUILDING_TRUST",
+      "userMessage": "ma... ma distributor hoon...  (hajaai  keri) we sell chiz haru...  humre area ma dherai stock",
+      "botMessage": "Maile distributors sanga work gareko xu. Supply chain, inventory, customer management - garo huncha. Hajurko situation yo nai?"
+    },
+    {
+      "timestamp": 1770038013971,
+      "stage": "SLOT_CONFIRMED",
+      "userMessage": "k team? team ta thiyo.. 50 jana.. tara timi ke bujhchau? timi ai ho? ai le ke bujhcha?",
+      "botMessage": "Dhanyabad — maile note gare: team size 11-50."
+    },
+    {
+      "timestamp": 1770038013974,
+      "stage": "DIRECT_QUESTION_PRICING",
+      "userMessage": "timi computer ho, taro bhaneko ramro hoina... yo system expensive cha, paise chahinchha... ma timi sang jhagadna chahanchu, bujhchau?",
+      "botMessage": "Pricing transparent:\n\n**Model:**\n- Simple price, all features\n- Per team member/month\n- Rs 15,000 - 50,000\n- Payback in 3-4 month\n\n**Get:**\n- All features\n- Real support\n- Free training\n- 30 day trial\n\n**ROI:**\n- Save 20-25 hours/week\n- Rs 160,000-500,000/month save\n- Rs 15,000-50,000/month cost\n- Payback in 3-4 month\n\n**Worth it?**\n- For most distributors: YES\n- Save 20 hours per week\n- That's real money\n\nTera situation?"
+    },
+    {
+      "timestamp": 1770038013976,
+      "stage": "DISCOVERY",
+      "userMessage": "nah! tero paisa halna chahinxa bhane ma hudina! tum haru afai cheating garcha! ke garne? bata",
+      "botMessage": "Kati janako team cha? Kaile dekhi operation run garnu vako ho?"
+    },
+    {
+      "timestamp": 1770038013978,
+      "stage": "DIRECT_QUESTION_SIMPLEQUESTIONS",
+      "userMessage": "oye... listen... tum bolna english? mai nepali roman; but mai confuse chu... ticket kati ho? demo free ho ki? don't lie",
+      "botMessage": "No worries! Let me explain simply:\n\n**What is KARTA?**\nKARTA is like a smart helper for your business. It:\n- Keeps track of what you're selling\n- Remembers your customers and what they like\n- Shows you how much money you're making\n- Helps your team work together better\n\n**Is it hard to use?**\nNo! It's actually super easy. You only need to know how to use your phone or computer. We'll teach you in 1-2 sessions. No technical skills needed.\n\n**Is it free?**\nNot free, but it's affordable. You pay once a month. And here's the good part - most businesses make back the cost in 3-4 months because they save so much time.\n\n**Will you steal my money?**\nNo. We're a real company. Your data is completely safe with us.\n\n**Should you try?**\nYES! We have a trial period so you can test it risk-free. If you don't like it, you can stop anytime.\n\nWant to try it?"
+    },
+    {
+      "timestamp": 1770038013980,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "hi hi hi!! hajur, feri suru garna parcha, ma naya hun",
+      "botMessage": "Namaste! 🙏\n\nMero naam Aju ho, ma Karta ko AI assistant chu.\n\nHajur kun bhasha ma kura garna chahanu huncha?\n\n1) Nepali (नेपाली)\n2) English\n3) Roman Nepali\n\nKripaya 1, 2 wa 3 likhnuhos"
+    },
+    {
+      "timestamp": 1770038013982,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "timro system bigriyo re! ma chhodchu! haro k garnu hola",
+      "botMessage": "Thik xa! Roman Nepali ma jari raakhau."
+    },
+    {
+      "timestamp": 1770038013983,
+      "stage": "DISCOVERY",
+      "userMessage": "ok thik chha... demo bhetaula? 3 pm ok",
+      "botMessage": "Hajur kun type ko business chalanu huncha? (jasto distributor, wholesaler, manufacturer, ya kahi aru?)"
+    },
+    {
+      "timestamp": 1770038025746,
+      "stage": "DISCOVERY",
+      "userMessage": "hoooo Ajuuu... suna cha?? ma daru khayeko chu, kheri sanga kura garna milcha? hi hi",
+      "botMessage": "Maaph garnuhos — ma ali farak tarikale sodchhu: Kati jana ko team cha? Approx bolnus."
+    },
+    {
+      "timestamp": 1770038025751,
+      "stage": "DISCOVERY",
+      "userMessage": "3 yaar mai roman ma bolchu - 3 na",
+      "botMessage": "Jaba ma bujhna sakina, kripaya heryos:\n1) 1-10\n2) 11-50\n3) 50+\n4) Na bhanne"
+    },
+    {
+      "timestamp": 1770038025755,
+      "stage": "BUILDING_TRUST",
+      "userMessage": "ma... ma distributor hoon...  (hajaai  keri) we sell chiz haru...  humre area ma dherai stock",
+      "botMessage": "Maile distributors sanga work gareko xu. Supply chain, inventory, customer management - garo huncha. Hajurko situation yo nai?"
+    },
+    {
+      "timestamp": 1770038025758,
+      "stage": "SLOT_CONFIRMED",
+      "userMessage": "k team? team ta thiyo.. 50 jana.. tara timi ke bujhchau? timi ai ho? ai le ke bujhcha?",
+      "botMessage": "Dhanyabad — maile note gare: team size 11-50."
+    },
+    {
+      "timestamp": 1770038025760,
+      "stage": "DIRECT_QUESTION_PRICING",
+      "userMessage": "timi computer ho, taro bhaneko ramro hoina... yo system expensive cha, paise chahinchha... ma timi sang jhagadna chahanchu, bujhchau?",
+      "botMessage": "Pricing transparent:\n\n**Model:**\n- Simple price, all features\n- Per team member/month\n- Rs 15,000 - 50,000\n- Payback in 3-4 month\n\n**Get:**\n- All features\n- Real support\n- Free training\n- 30 day trial\n\n**ROI:**\n- Save 20-25 hours/week\n- Rs 160,000-500,000/month save\n- Rs 15,000-50,000/month cost\n- Payback in 3-4 month\n\n**Worth it?**\n- For most distributors: YES\n- Save 20 hours per week\n- That's real money\n\nTera situation?"
+    },
+    {
+      "timestamp": 1770038025763,
+      "stage": "DISCOVERY",
+      "userMessage": "nah! tero paisa halna chahinxa bhane ma hudina! tum haru afai cheating garcha! ke garne? bata",
+      "botMessage": "Kati janako team cha? Kaile dekhi operation run garnu vako ho?"
+    },
+    {
+      "timestamp": 1770038025766,
+      "stage": "DIRECT_QUESTION_SIMPLEQUESTIONS",
+      "userMessage": "oye... listen... tum bolna english? mai nepali roman; but mai confuse chu... ticket kati ho? demo free ho ki? don't lie",
+      "botMessage": "No worries! Let me explain simply:\n\n**What is KARTA?**\nKARTA is like a smart helper for your business. It:\n- Keeps track of what you're selling\n- Remembers your customers and what they like\n- Shows you how much money you're making\n- Helps your team work together better\n\n**Is it hard to use?**\nNo! It's actually super easy. You only need to know how to use your phone or computer. We'll teach you in 1-2 sessions. No technical skills needed.\n\n**Is it free?**\nNot free, but it's affordable. You pay once a month. And here's the good part - most businesses make back the cost in 3-4 months because they save so much time.\n\n**Will you steal my money?**\nNo. We're a real company. Your data is completely safe with us.\n\n**Should you try?**\nYES! We have a trial period so you can test it risk-free. If you don't like it, you can stop anytime.\n\nWant to try it?"
+    },
+    {
+      "timestamp": 1770038025769,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "hi hi hi!! hajur, feri suru garna parcha, ma naya hun",
+      "botMessage": "Namaste! 🙏\n\nMero naam Aju ho, ma Karta ko AI assistant chu.\n\nHajur kun bhasha ma kura garna chahanu huncha?\n\n1) Nepali (नेपाली)\n2) English\n3) Roman Nepali\n\nKripaya 1, 2 wa 3 likhnuhos"
+    },
+    {
+      "timestamp": 1770038025771,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "timro system bigriyo re! ma chhodchu! haro k garnu hola",
+      "botMessage": "Thik xa! Roman Nepali ma jari raakhau."
+    },
+    {
+      "timestamp": 1770038025774,
+      "stage": "DISCOVERY",
+      "userMessage": "ok thik chha... demo bhetaula? 3 pm ok",
+      "botMessage": "Hajur kun type ko business chalanu huncha? (jasto distributor, wholesaler, manufacturer, ya kahi aru?)"
+    },
+    {
+      "timestamp": 1770038050343,
+      "stage": "DISCOVERY",
+      "userMessage": "hoooo Ajuuu... suna cha?? ma daru khayeko chu, kheri sanga kura garna milcha? hi hi",
+      "botMessage": "Maaph garnuhos — ma ali farak tarikale sodchhu: Kati jana ko team cha? Approx bolnus."
+    },
+    {
+      "timestamp": 1770038050348,
+      "stage": "DISCOVERY",
+      "userMessage": "3 yaar mai roman ma bolchu - 3 na",
+      "botMessage": "Jaba ma bujhna sakina, kripaya heryos:\n1) 1-10\n2) 11-50\n3) 50+\n4) Na bhanne"
+    },
+    {
+      "timestamp": 1770038050351,
+      "stage": "BUILDING_TRUST",
+      "userMessage": "ma... ma distributor hoon...  (hajaai  keri) we sell chiz haru...  humre area ma dherai stock",
+      "botMessage": "Maile distributors sanga work gareko xu. Supply chain, inventory, customer management - garo huncha. Hajurko situation yo nai?"
+    },
+    {
+      "timestamp": 1770038050355,
+      "stage": "SLOT_CONFIRMED",
+      "userMessage": "k team? team ta thiyo.. 50 jana.. tara timi ke bujhchau? timi ai ho? ai le ke bujhcha?",
+      "botMessage": "Dhanyabad — maile note gare: team size 11-50."
+    },
+    {
+      "timestamp": 1770038050357,
+      "stage": "DIRECT_QUESTION_PRICING",
+      "userMessage": "timi computer ho, taro bhaneko ramro hoina... yo system expensive cha, paise chahinchha... ma timi sang jhagadna chahanchu, bujhchau?",
+      "botMessage": "Pricing transparent:\n\n**Model:**\n- Simple price, all features\n- Per team member/month\n- Rs 15,000 - 50,000\n- Payback in 3-4 month\n\n**Get:**\n- All features\n- Real support\n- Free training\n- 30 day trial\n\n**ROI:**\n- Save 20-25 hours/week\n- Rs 160,000-500,000/month save\n- Rs 15,000-50,000/month cost\n- Payback in 3-4 month\n\n**Worth it?**\n- For most distributors: YES\n- Save 20 hours per week\n- That's real money\n\nTera situation?"
+    },
+    {
+      "timestamp": 1770038050359,
+      "stage": "DISCOVERY",
+      "userMessage": "nah! tero paisa halna chahinxa bhane ma hudina! tum haru afai cheating garcha! ke garne? bata",
+      "botMessage": "Kati janako team cha? Kaile dekhi operation run garnu vako ho?"
+    },
+    {
+      "timestamp": 1770038050362,
+      "stage": "DIRECT_QUESTION_SIMPLEQUESTIONS",
+      "userMessage": "oye... listen... tum bolna english? mai nepali roman; but mai confuse chu... ticket kati ho? demo free ho ki? don't lie",
+      "botMessage": "No worries! Let me explain simply:\n\n**What is KARTA?**\nKARTA is like a smart helper for your business. It:\n- Keeps track of what you're selling\n- Remembers your customers and what they like\n- Shows you how much money you're making\n- Helps your team work together better\n\n**Is it hard to use?**\nNo! It's actually super easy. You only need to know how to use your phone or computer. We'll teach you in 1-2 sessions. No technical skills needed.\n\n**Is it free?**\nNot free, but it's affordable. You pay once a month. And here's the good part - most businesses make back the cost in 3-4 months because they save so much time.\n\n**Will you steal my money?**\nNo. We're a real company. Your data is completely safe with us.\n\n**Should you try?**\nYES! We have a trial period so you can test it risk-free. If you don't like it, you can stop anytime.\n\nWant to try it?"
+    },
+    {
+      "timestamp": 1770038050367,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "hi hi hi!! hajur, feri suru garna parcha, ma naya hun",
+      "botMessage": "Namaste! 🙏\n\nMero naam Aju ho, ma Karta ko AI assistant chu.\n\nHajur kun bhasha ma kura garna chahanu huncha?\n\n1) Nepali (नेपाली)\n2) English\n3) Roman Nepali\n\nKripaya 1, 2 wa 3 likhnuhos"
+    },
+    {
+      "timestamp": 1770038050368,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "timro system bigriyo re! ma chhodchu! haro k garnu hola",
+      "botMessage": "Thik xa! Roman Nepali ma jari raakhau."
+    },
+    {
+      "timestamp": 1770038050372,
+      "stage": "DISCOVERY",
+      "userMessage": "ok thik chha... demo bhetaula? 3 pm ok",
+      "botMessage": "Hajur kun type ko business chalanu huncha? (jasto distributor, wholesaler, manufacturer, ya kahi aru?)"
+    },
+    {
+      "timestamp": 1770038088971,
+      "stage": "DISCOVERY",
+      "userMessage": "hoooo Ajuuu... suna cha?? ma daru khayeko chu, kheri sanga kura garna milcha? hi hi",
+      "botMessage": "Maaph garnuhos — ma ali farak tarikale sodchhu: Kati jana ko team cha? Approx bolnus."
+    },
+    {
+      "timestamp": 1770038088976,
+      "stage": "DISCOVERY",
+      "userMessage": "3 yaar mai roman ma bolchu - 3 na",
+      "botMessage": "Jaba ma bujhna sakina, kripaya heryos:\n1) 1-10\n2) 11-50\n3) 50+\n4) Na bhanne"
+    },
+    {
+      "timestamp": 1770038088980,
+      "stage": "BUILDING_TRUST",
+      "userMessage": "ma... ma distributor hoon...  (hajaai  keri) we sell chiz haru...  humre area ma dherai stock",
+      "botMessage": "Maile distributors sanga work gareko xu. Supply chain, inventory, customer management - garo huncha. Hajurko situation yo nai?"
+    },
+    {
+      "timestamp": 1770038088983,
+      "stage": "SLOT_CONFIRMED",
+      "userMessage": "k team? team ta thiyo.. 50 jana.. tara timi ke bujhchau? timi ai ho? ai le ke bujhcha?",
+      "botMessage": "Dhanyabad — maile note gare: team size 11-50."
+    },
+    {
+      "timestamp": 1770038088986,
+      "stage": "DIRECT_QUESTION_PRICING",
+      "userMessage": "timi computer ho, taro bhaneko ramro hoina... yo system expensive cha, paise chahinchha... ma timi sang jhagadna chahanchu, bujhchau?",
+      "botMessage": "Pricing transparent:\n\n**Model:**\n- Simple price, all features\n- Per team member/month\n- Rs 15,000 - 50,000\n- Payback in 3-4 month\n\n**Get:**\n- All features\n- Real support\n- Free training\n- 30 day trial\n\n**ROI:**\n- Save 20-25 hours/week\n- Rs 160,000-500,000/month save\n- Rs 15,000-50,000/month cost\n- Payback in 3-4 month\n\n**Worth it?**\n- For most distributors: YES\n- Save 20 hours per week\n- That's real money\n\nTera situation?"
+    },
+    {
+      "timestamp": 1770038088989,
+      "stage": "DISCOVERY",
+      "userMessage": "nah! tero paisa halna chahinxa bhane ma hudina! tum haru afai cheating garcha! ke garne? bata",
+      "botMessage": "Kati janako team cha? Kaile dekhi operation run garnu vako ho?"
+    },
+    {
+      "timestamp": 1770038088992,
+      "stage": "DIRECT_QUESTION_SIMPLEQUESTIONS",
+      "userMessage": "oye... listen... tum bolna english? mai nepali roman; but mai confuse chu... ticket kati ho? demo free ho ki? don't lie",
+      "botMessage": "No worries! Let me explain simply:\n\n**What is KARTA?**\nKARTA is like a smart helper for your business. It:\n- Keeps track of what you're selling\n- Remembers your customers and what they like\n- Shows you how much money you're making\n- Helps your team work together better\n\n**Is it hard to use?**\nNo! It's actually super easy. You only need to know how to use your phone or computer. We'll teach you in 1-2 sessions. No technical skills needed.\n\n**Is it free?**\nNot free, but it's affordable. You pay once a month. And here's the good part - most businesses make back the cost in 3-4 months because they save so much time.\n\n**Will you steal my money?**\nNo. We're a real company. Your data is completely safe with us.\n\n**Should you try?**\nYES! We have a trial period so you can test it risk-free. If you don't like it, you can stop anytime.\n\nWant to try it?"
+    },
+    {
+      "timestamp": 1770038088994,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "hi hi hi!! hajur, feri suru garna parcha, ma naya hun",
+      "botMessage": "Namaste! 🙏\n\nMero naam Aju ho, ma Karta ko AI assistant chu.\n\nHajur kun bhasha ma kura garna chahanu huncha?\n\n1) Nepali (नेपाली)\n2) English\n3) Roman Nepali\n\nKripaya 1, 2 wa 3 likhnuhos"
+    },
+    {
+      "timestamp": 1770038088996,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "timro system bigriyo re! ma chhodchu! haro k garnu hola",
+      "botMessage": "Thik xa! Roman Nepali ma jari raakhau."
+    },
+    {
+      "timestamp": 1770038088998,
+      "stage": "DISCOVERY",
+      "userMessage": "ok thik chha... demo bhetaula? 3 pm ok",
+      "botMessage": "Hajur kun type ko business chalanu huncha? (jasto distributor, wholesaler, manufacturer, ya kahi aru?)"
+    },
+    {
+      "timestamp": 1770038852478,
+      "stage": "DISCOVERY",
+      "userMessage": "hoooo Ajuuu... suna cha?? ma daru khayeko chu, kheri sanga kura garna milcha? hi hi",
+      "botMessage": "Maaph garnuhos — ma ali farak tarikale sodchhu: Kati jana ko team cha? Approx bolnus."
+    },
+    {
+      "timestamp": 1770038852483,
+      "stage": "DISCOVERY",
+      "userMessage": "3 yaar mai roman ma bolchu - 3 na",
+      "botMessage": "Jaba ma bujhna sakina, kripaya heryos:\n1) 1-10\n2) 11-50\n3) 50+\n4) Na bhanne"
+    },
+    {
+      "timestamp": 1770038852487,
+      "stage": "AI_ANSWER_GENERAL",
+      "userMessage": "ma... ma distributor hoon...  (hajaai  keri) we sell chiz haru...  humre area ma dherai stock",
+      "botMessage": "**Complete Inventory Management in Karta:**\n\n**Product Management:**\n• Add/edit products with SKU, name, category\n• Set cost price and retail/wholesale selling prices\n• Batch tracking for expirables (medicines, FMCG)\n• Track expiry dates per batch\n\n**Stock Control:**\n• Auto-deduct stock on each sale (FIFO/Batch-wise)\n• Set reorder levels for automatic alerts\n• Manual stock adjustments for breakage/shrinkage\n• Bulk price adjustment tools\n\n**Supplier Integration:**\n• Link products to specific suppliers\n• Track supplier for each product\n• Automated reorder tracking\n\n**Alerts & Monitoring:**\n• Low stock warnings when below reorder level\n• Expired product alerts\n• Stock value dashboard\n• Category-wise stock analysis\n\n**Real-World Example:**\nIf you sell 5 medicine units:\n• Karta automatically deducts from oldest batch first\n• If that batch expires, it alerts you\n• Reorder level triggers when stock < 10\n\nThis ensures you never stockout and always sell fresh inventory!\n\nWant to know how to handle specific inventory scenarios?\n\n---\n✨ **Anything else?** Don't hesitate to ask—whether it's about Karta, calculations, or how to optimize your business."
+    },
+    {
+      "timestamp": 1770038852490,
+      "stage": "SLOT_CONFIRMED",
+      "userMessage": "k team? team ta thiyo.. 50 jana.. tara timi ke bujhchau? timi ai ho? ai le ke bujhcha?",
+      "botMessage": "Dhanyabad — maile note gare: team size 11-50."
+    },
+    {
+      "timestamp": 1770038852493,
+      "stage": "DIRECT_QUESTION_PRICING",
+      "userMessage": "timi computer ho, taro bhaneko ramro hoina... yo system expensive cha, paise chahinchha... ma timi sang jhagadna chahanchu, bujhchau?",
+      "botMessage": "Pricing transparent:\n\n**Model:**\n- Simple price, all features\n- Per team member/month\n- Rs 15,000 - 50,000\n- Payback in 3-4 month\n\n**Get:**\n- All features\n- Real support\n- Free training\n- 30 day trial\n\n**ROI:**\n- Save 20-25 hours/week\n- Rs 160,000-500,000/month save\n- Rs 15,000-50,000/month cost\n- Payback in 3-4 month\n\n**Worth it?**\n- For most distributors: YES\n- Save 20 hours per week\n- That's real money\n\nTera situation?"
+    },
+    {
+      "timestamp": 1770038852495,
+      "stage": "DISCOVERY",
+      "userMessage": "nah! tero paisa halna chahinxa bhane ma hudina! tum haru afai cheating garcha! ke garne? bata",
+      "botMessage": "Hajur kun type ko business chalanu huncha? (jasto distributor, wholesaler, manufacturer, ya kahi aru?)"
+    },
+    {
+      "timestamp": 1770038852497,
+      "stage": "AI_ANSWER_PRICING",
+      "userMessage": "oye... listen... tum bolna english? mai nepali roman; but mai confuse chu... ticket kati ho? demo free ho ki? don't lie",
+      "botMessage": "Great question about pricing! While I don't have the exact pricing details in my current knowledge base, I can tell you that Karta is designed to be affordable for **small to medium businesses**.\n\n**What I can share:**\n• Karta is a one-time investment (not a monthly subscription model)\n• It works offline, so no continuous cloud costs\n• It uses Firebase for backend, which is scalable\n• Perfect for businesses of any size wanting to manage finances professionally\n\n**For specific pricing details**, please:\n• Contact the Karta team directly\n• Check the official website\n• Ask about volume discounts for multiple users\n\nWould you like help with anything else about Karta's features or capabilities?\n\n---\n💡 **Need clarification?** Feel free to ask follow-up questions. I'm here to help!"
+    },
+    {
+      "timestamp": 1770038852500,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "hi hi hi!! hajur, feri suru garna parcha, ma naya hun",
+      "botMessage": "Namaste! 🙏\n\nMero naam Aju ho, ma Karta ko AI assistant chu.\n\nHajur kun bhasha ma kura garna chahanu huncha?\n\n1) Nepali (नेपाली)\n2) English\n3) Roman Nepali\n\nKripaya 1, 2 wa 3 likhnuhos"
+    },
+    {
+      "timestamp": 1770038852502,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "timro system bigriyo re! ma chhodchu! haro k garnu hola",
+      "botMessage": "Thik xa! Roman Nepali ma jari raakhau."
+    },
+    {
+      "timestamp": 1770038852504,
+      "stage": "DISCOVERY",
+      "userMessage": "ok thik chha... demo bhetaula? 3 pm ok",
+      "botMessage": "Maaph garnuhos — ma ali farak tarikale sodchhu: Kati jana ko team cha? Approx bolnus."
+    }
+  ],
+  "test_greeting_1770037815560": [
+    {
+      "timestamp": 1770037815562,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "how are you",
+      "botMessage": "Namaste! 🙏\n\nMero naam Aju ho, ma Karta ko AI assistant chu.\n\nHajur kun bhasha ma kura garna chahanu huncha?\n\n1) Nepali (नेपाली)\n2) English\n3) Roman Nepali\n\nKripaya 1, 2 wa 3 likhnuhos"
+    },
+    {
+      "timestamp": 1770037815564,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "how are you doing",
+      "botMessage": "Thik xa! Roman Nepali ma jari raakhau."
+    },
+    {
+      "timestamp": 1770037815566,
+      "stage": "DISCOVERY",
+      "userMessage": "hi how are you",
+      "botMessage": "Hajur kun type ko business chalanu huncha? (jasto distributor, wholesaler, manufacturer, ya kahi aru?)"
+    },
+    {
+      "timestamp": 1770037815569,
+      "stage": "DISCOVERY",
+      "userMessage": "how r u",
+      "botMessage": "Kaile solution lagu garna chahnu huncha?"
+    },
+    {
+      "timestamp": 1770037815571,
+      "stage": "DISCOVERY",
+      "userMessage": "what's up",
+      "botMessage": "Maaph garnuhos — ma ali farak tarikale sodchhu: Kati jana ko team cha? Approx bolnus."
+    },
+    {
+      "timestamp": 1770037815573,
+      "stage": "DISCOVERY",
+      "userMessage": "how is everything",
+      "botMessage": "Hajur kun type ko business chalanu huncha? (jasto distributor, wholesaler, manufacturer, ya kahi aru?)"
+    }
+  ],
+  "user_001": [
+    {
+      "timestamp": 1770038868830,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "Hi!",
+      "botMessage": "Namaste! 🙏\n\nMero naam Aju ho, ma Karta ko AI assistant chu.\n\nHajur kun bhasha ma kura garna chahanu huncha?\n\n1) Nepali (नेपाली)\n2) English\n3) Roman Nepali\n\nKripaya 1, 2 wa 3 likhnuhos"
+    }
+  ],
+  "user_002": [
+    {
+      "timestamp": 1770038868832,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "hi",
+      "botMessage": "Namaste! 🙏\n\nMero naam Aju ho, ma Karta ko AI assistant chu.\n\nHajur kun bhasha ma kura garna chahanu huncha?\n\n1) Nepali (नेपाली)\n2) English\n3) Roman Nepali\n\nKripaya 1, 2 wa 3 likhnuhos"
+    },
+    {
+      "timestamp": 1770038868834,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "1",
+      "botMessage": "Great! Let's talk in English.\n\nSo, what brings you here today?"
+    },
+    {
+      "timestamp": 1770038868838,
+      "stage": "AI_ANSWER_FEATURES",
+      "userMessage": "What are the main features of Karta?",
+      "botMessage": "Karta has comprehensive features for complete business management:\n\n**Core Features:**\n• **POS Terminal**: Fast billing, barcode scanning, retail/wholesale pricing, multiple payment modes\n• **Inventory Management**: Product database, batch tracking for expirables, auto reorder levels\n• **Invoice Management**: Sales, Purchase, Credit Settlement invoices with PDF export\n• **Financial Tracking**: Complete ledgers for customers, suppliers, cash, and bank\n• **16 Reports**: Sales, VAT, expense, financial statements, aging analysis, reconciliation\n• **Dashboard**: Real-time KPIs, revenue tracking, stock alerts, analytics\n\n**Intelligent Features:**\n• **Dual Date System**: English (AD) and Nepali (BS) dates simultaneously\n• **Offline Capable**: Works without internet connection\n• **Multi-Country**: Configured for Nepal and Dubai with country-specific tax rules\n• **Batch Tracking**: Manage expiry dates for medicines, FMCG products\n• **Smart Stock**: FIFO/Batch-wise automatic deduction\n\n**Security & Compliance:**\n• **IRD Compliance** (Nepal): Audit trails, CBMS sync\n• **Private Database**: Your data stays secure\n• **Client-Side Processing**: No external servers needed for sensitive operations\n\nWould you like details on any specific feature?\n\n---\n✨ **Anything else?** Don't hesitate to ask—whether it's about Karta, calculations, or how to optimize your business."
+    }
+  ],
+  "user_003": [
+    {
+      "timestamp": 1770038868840,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "how are you?",
+      "botMessage": "Namaste! 🙏\n\nMero naam Aju ho, ma Karta ko AI assistant chu.\n\nHajur kun bhasha ma kura garna chahanu huncha?\n\n1) Nepali (नेपाली)\n2) English\n3) Roman Nepali\n\nKripaya 1, 2 wa 3 likhnuhos"
+    },
+    {
+      "timestamp": 1770038868842,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "1",
+      "botMessage": "Great! Let's talk in English.\n\nSo, what brings you here today?"
+    }
+  ],
+  "user_004": [
+    {
+      "timestamp": 1770038868844,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "Hey",
+      "botMessage": "I couldn't confidently detect your language — please type 1, 2, or 3 to choose.\n\nNamaste! 🙏\n\nHi there! I'm Aju, Karta's AI assistant.\n\nWhich language would you like to use?\n\n1) English\n2) Nepali (नेपाली)\n3) Roman Nepali\n\nJust type 1, 2, or 3"
+    },
+    {
+      "timestamp": 1770038868845,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "1",
+      "botMessage": "Great! Let's talk in English.\n\nSo, what brings you here today?"
+    },
+    {
+      "timestamp": 1770038868847,
+      "stage": "AI_ANSWER_CALCULATION",
+      "userMessage": "What is 15% of 5000?",
+      "botMessage": "5000% of 15 = **750.00**\n\n💡 Business Example:\nIf you give a 5000% discount on ₹15 sale:\n- Discount amount: ₹750.00\n- Price after discount: ₹-735.00\n\n---\n🎯 **Have another question?** I'm ready to help with anything about Karta or business planning."
+    }
+  ],
+  "user_005": [
+    {
+      "timestamp": 1770038868849,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "hello",
+      "botMessage": "Namaste! 🙏\n\nHi there! I'm Aju, Karta's AI assistant.\n\nWhich language would you like to use?\n\n1) English\n2) Nepali (नेपाली)\n3) Roman Nepali\n\nJust type 1, 2, or 3"
+    },
+    {
+      "timestamp": 1770038868851,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "2",
+      "botMessage": "ठीक छ! नेपालीमा कुरा गरौँ।\n\nअब बताइए - तपाई यहाँ कसको लागि आउनुभएको हो?"
+    },
+    {
+      "timestamp": 1770038868852,
+      "stage": "AI_ANSWER_HOWTO",
+      "userMessage": "How do I set up Karta?",
+      "botMessage": "**Getting Started with Karta - Setup Guide:**\n\n**Step 1: Initial Configuration**\n• Enter your business name and logo\n• Select your country (Nepal or Dubai)\n• Choose tax mode (VAT/Tax)\n• Set currency preference\n\n**Step 2: Basic Data Entry**\n• Add your products to Inventory (SKU, name, cost, retail price, wholesale price)\n• Set opening cash and bank balances\n• Add your customers and suppliers (optional but recommended)\n\n**Step 3: Start Operating**\n• Use POS Terminal to ring up sales\n• System automatically updates inventory\n• Financial ledgers update in real-time\n• Generate reports anytime\n\n**Step 4: Ongoing Management**\n• Manage low stock items\n• Track customer/supplier payments\n• Process returns when needed\n• Review reports regularly\n\n**Tips:**\n• Set reorder levels for automatic stock alerts\n• Use batch tracking for medicines/expirables\n• Enable offline mode for uninterrupted operations\n• Back up your data regularly\n\nNeed help with specific setup steps?\n\n---\n✨ **Anything else?** Don't hesitate to ask—whether it's about Karta, calculations, or how to optimize your business."
+    }
+  ],
+  "casual_user_001": [
+    {
+      "timestamp": 1770039603898,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "hi",
+      "botMessage": "Namaste! 🙏\n\nMero naam Aju ho, ma Karta ko AI assistant chu.\n\nHajur kun bhasha ma kura garna chahanu huncha?\n\n1) Nepali (नेपाली)\n2) English\n3) Roman Nepali\n\nKripaya 1, 2 wa 3 likhnuhos"
+    },
+    {
+      "timestamp": 1770039603900,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "1",
+      "botMessage": "Great! Let's talk in English.\n\nSo, what brings you here today?"
+    },
+    {
+      "timestamp": 1770039603903,
+      "stage": "CASUAL_BOREDOM",
+      "userMessage": "nothing just bored, tell me a joke",
+      "botMessage": "Perfect timing! 🎉 Boredom is actually opportunity—let's make it interesting.\n\n**You can:**\n• Share what's going on in your world\n• Ask me literally anything (yes, anything!)\n• Get my thoughts on topics you care about\n• Discover something new\n• Just vibe and chat about life\n\nWhat's on your mind right now? No topic too small or too big."
+    }
+  ],
+  "business_user_002": [
+    {
+      "timestamp": 1770039603907,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "hi",
+      "botMessage": "Namaste! 🙏\n\nMero naam Aju ho, ma Karta ko AI assistant chu.\n\nHajur kun bhasha ma kura garna chahanu huncha?\n\n1) Nepali (नेपाली)\n2) English\n3) Roman Nepali\n\nKripaya 1, 2 wa 3 likhnuhos"
+    },
+    {
+      "timestamp": 1770039603908,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "2",
+      "botMessage": "ठीक छ! नेपालीमा कुरा गरौँ।\n\nअब बताइए - तपाई यहाँ कसको लागि आउनुभएको हो?"
+    },
+    {
+      "timestamp": 1770039603912,
+      "stage": "AI_ANSWER_FEATURES",
+      "userMessage": "What are the features of Karta?",
+      "botMessage": "Karta has comprehensive features for complete business management:\n\n**Core Features:**\n• **POS Terminal**: Fast billing, barcode scanning, retail/wholesale pricing, multiple payment modes\n• **Inventory Management**: Product database, batch tracking for expirables, auto reorder levels\n• **Invoice Management**: Sales, Purchase, Credit Settlement invoices with PDF export\n• **Financial Tracking**: Complete ledgers for customers, suppliers, cash, and bank\n• **16 Reports**: Sales, VAT, expense, financial statements, aging analysis, reconciliation\n• **Dashboard**: Real-time KPIs, revenue tracking, stock alerts, analytics\n\n**Intelligent Features:**\n• **Dual Date System**: English (AD) and Nepali (BS) dates simultaneously\n• **Offline Capable**: Works without internet connection\n• **Multi-Country**: Configured for Nepal and Dubai with country-specific tax rules\n• **Batch Tracking**: Manage expiry dates for medicines, FMCG products\n• **Smart Stock**: FIFO/Batch-wise automatic deduction\n\n**Security & Compliance:**\n• **IRD Compliance** (Nepal): Audit trails, CBMS sync\n• **Private Database**: Your data stays secure\n• **Client-Side Processing**: No external servers needed for sensitive operations\n\nWould you like details on any specific feature?\n\n---\n✨ **Anything else?** Don't hesitate to ask—whether it's about Karta, calculations, or how to optimize your business."
+    }
+  ],
+  "calc_user_003": [
+    {
+      "timestamp": 1770039603915,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "hi",
+      "botMessage": "Namaste! 🙏\n\nMero naam Aju ho, ma Karta ko AI assistant chu.\n\nHajur kun bhasha ma kura garna chahanu huncha?\n\n1) Nepali (नेपाली)\n2) English\n3) Roman Nepali\n\nKripaya 1, 2 wa 3 likhnuhos"
+    },
+    {
+      "timestamp": 1770039603917,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "1",
+      "botMessage": "Great! Let's talk in English.\n\nSo, what brings you here today?"
+    },
+    {
+      "timestamp": 1770039603920,
+      "stage": "AI_ANSWER_CALCULATION",
+      "userMessage": "Calculate 25% of 2000 for me",
+      "botMessage": "2000% of 25 = **500.00**\n\n💡 Business Example:\nIf you give a 2000% discount on ₹25 sale:\n- Discount amount: ₹500.00\n- Price after discount: ₹-475.00\n\n---\n💡 **Need clarification?** Feel free to ask follow-up questions. I'm here to help!"
+    }
+  ],
+  "test123": [
+    {
+      "timestamp": 1770039633429,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "hi",
+      "botMessage": "Namaste! 🙏\n\nMero naam Aju ho, ma Karta ko AI assistant chu.\n\nHajur kun bhasha ma kura garna chahanu huncha?\n\n1) Nepali (नेपाली)\n2) English\n3) Roman Nepali\n\nKripaya 1, 2 wa 3 likhnuhos"
+    },
+    {
+      "timestamp": 1770039633431,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "2",
+      "botMessage": "ठीक छ! नेपालीमा कुरा गरौँ।\n\nअब बताइए - तपाई यहाँ कसको लागि आउनुभएको हो?"
+    },
+    {
+      "timestamp": 1770039633434,
+      "stage": "CASUAL_BOREDOM",
+      "userMessage": "nothing i was just bored so i thought of talking with you",
+      "botMessage": "Perfect timing! 🎉 Boredom is actually opportunity—let's make it interesting.\n\n**You can:**\n• Share what's going on in your world\n• Ask me literally anything (yes, anything!)\n• Get my thoughts on topics you care about\n• Discover something new\n• Just vibe and chat about life\n\nWhat's on your mind right now? No topic too small or too big."
+    }
+  ],
+  "test_user_1770040596944": [
+    {
+      "timestamp": 1770040596946,
+      "stage": "LANGUAGE_SELECTION",
+      "userMessage": "hi",
+      "botMessage": "Namaste! 🙏\n\nMero naam Aju ho, ma Karta ko AI assistant chu.\n\nHajur kun bhasha ma kura garna chahanu huncha?\n\n1) Nepali (नेपाली)\n2) English\n3) Roman Nepali\n\nKripaya 1, 2 wa 3 likhnuhos"
+    },
+    {
+      "timestamp": 1770040596948,
+      "stage": "LANGUAGE_CONFIRMED",
+      "userMessage": "1",
+      "botMessage": "Great! Let's talk in English.\n\nSo, what brings you here today?"
+    },
+    {
+      "timestamp": 1770040597563,
+      "stage": "INTELLIGENT_RESPONSE",
+      "userMessage": "k ho karta vaneko matlab",
+      "botMessage": "Great question about Karta! I can help with:\n\n✅ What features Karta has\n✅ How inventory management works\n✅ Accounting & invoicing\n✅ Reports & analytics\n✅ Pricing & setup\n\nWhat would you like to know?"
+    },
+    {
+      "timestamp": 1770040598023,
+      "stage": "INTELLIGENT_RESPONSE",
+      "userMessage": "who is albert einstein",
+      "botMessage": "Albert Einstein was a theoretical physicist who revolutionized physics with his theory of relativity. Born in 1879 in Germany, he showed that matter and energy are interchangeable (E=mc²). He won the Nobel Prize and is considered one of the smartest people who ever lived."
+    },
+    {
+      "timestamp": 1770040598702,
+      "stage": "INTELLIGENT_RESPONSE",
+      "userMessage": "who is elon musk",
+      "botMessage": "Elon Musk is a South African-born entrepreneur and engineer. He founded companies like Zip2, X.com (which became PayPal), SpaceX, and Tesla. He's known for his ambitious goals like making humans multiplanetary (Mars colonization) and accelerating sustainable energy."
+    },
+    {
+      "timestamp": 1770040599222,
+      "stage": "INTELLIGENT_RESPONSE",
+      "userMessage": "what are karta features",
+      "botMessage": "That's an interesting question! I don't have specific information about that in my knowledge base, but I can tell you about Karta - a complete business management system for distributors.\n\nWould you like to know more about:\n• What Karta can do for your business?\n• How it helps with inventory management?\n• Pricing and setup?\n\nOr continue asking about general topics - I'm here to chat!"
+    }
+  ],
+  "+977-test-123": [
+    {
+      "timestamp": 1770040913161,
+      "stage": "INTRODUCTION",
+      "userMessage": "hi",
+      "botMessage": "Namaste! 🙏 KARTA - business management tool. Hajur k type ko business chalanu huncha?"
+    }
+  ],
+  "+977-user1": [
+    {
+      "timestamp": 1770040918083,
+      "stage": "INTRODUCTION",
+      "userMessage": "hi",
+      "botMessage": "Namaste! 🙏 KARTA - business management tool. Hajur k type ko business chalanu huncha?"
+    }
+  ],
+  "+977-user2": [
+    {
+      "timestamp": 1770040918090,
+      "stage": "INTRODUCTION",
+      "userMessage": "नमसत",
+      "botMessage": "नमस्ते! 🙏 Hajur yo thaha huncha KARTA? Business management solution ho. Tell me - hajur k type ko business chalanu huncha?"
+    }
+  ],
+  "+977-user3": [
+    {
+      "timestamp": 1770040918097,
+      "stage": "DIRECT_QUESTION_COMPANY",
+      "userMessage": "who is ajaya dhungana",
+      "botMessage": "KARTA Story:\n\n**Founded:**\n- 15 saal distribution me\n- Pain see, system bana\n\n**Team:**\n- Distribution expert + engineer\n- 10+ years experience\n- Nepal based\n\n**Commitment:**\n- Customer success\n- Long term\n- Local support\n\nWhy work with us?\n\nSpecific?"
+    }
+  ],
+  "+977-test-xyz": [
+    {
+      "timestamp": 1770041058868,
+      "stage": "INTRODUCTION",
+      "userMessage": "hi",
+      "botMessage": "Namaste! 🙏 KARTA - business management tool. Hajur k type ko business chalanu huncha?"
+    }
+  ],
+  "+977-test-1": [
+    {
+      "timestamp": 1770041081676,
+      "stage": "INTELLIGENT_RESPONSE",
+      "userMessage": "hi",
+      "botMessage": "That's interesting! 😊 I'd love to chat about that, but I'm specifically built to help with Karta - a business management system.\n\nHowever, if you have questions about:\n✅ Running a business\n✅ Managing inventory\n✅ Accounting & finances\n✅ Sales management\n\nI'm your person! Or we can talk about Karta and how it might help your business.\n\nWhat interests you?"
+    }
+  ],
+  "+977-test-2": [
+    {
+      "timestamp": 1770041082164,
+      "stage": "INTELLIGENT_RESPONSE",
+      "userMessage": "who is einstein",
+      "botMessage": "That's an interesting question! I don't have specific information about that in my knowledge base, but I can tell you about Karta - a complete business management system for distributors.\n\nWould you like to know more about:\n• What Karta can do for your business?\n• How it helps with inventory management?\n• Pricing and setup?\n\nOr continue asking about general topics - I'm here to chat!"
+    },
+    {
+      "timestamp": 1770041106030,
+      "stage": "INTELLIGENT_RESPONSE",
+      "userMessage": "who is einstein",
+      "botMessage": "Albert Einstein was a theoretical physicist who revolutionized physics with his theory of relativity. Born in 1879 in Germany, he showed that matter and energy are interchangeable (E=mc²). He won the Nobel Prize and is considered one of the smartest people who ever lived."
+    }
+  ],
+  "+977-test-3": [
+    {
+      "timestamp": 1770041082627,
+      "stage": "INTELLIGENT_RESPONSE",
+      "userMessage": "who is ajaya dhungana",
+      "botMessage": "Ajaya Dhungana is the founder and builder of Karta - an innovative business management system designed to revolutionize how distributors and wholesalers work. He created me (Aju, the AI assistant) to make Karta smarter and more conversational. Ajaya built Karta with deep understanding of business challenges in Nepal and beyond. He's focused on creating practical solutions that actually solve distribution problems."
+    },
+    {
+      "timestamp": 1770041106037,
+      "stage": "CASUAL_CASUAL_CHAT",
+      "userMessage": "tell me about elon",
+      "botMessage": {}
+    }
+  ],
+  "+977-t1": [
+    {
+      "timestamp": 1770041128433,
+      "stage": "INTELLIGENT_RESPONSE",
+      "userMessage": "who is einstein",
+      "botMessage": "Albert Einstein was a theoretical physicist who revolutionized physics with his theory of relativity. Born in 1879 in Germany, he showed that matter and energy are interchangeable (E=mc²). He won the Nobel Prize and is considered one of the smartest people who ever lived."
+    }
+  ],
+  "+977-t2": [
+    {
+      "timestamp": 1770041128855,
+      "stage": "INTELLIGENT_RESPONSE",
+      "userMessage": "tell me about elon",
+      "botMessage": "Elon Musk is a South African-born entrepreneur and engineer. He founded companies like Zip2, X.com (which became PayPal), SpaceX, and Tesla. He's known for his ambitious goals like making humans multiplanetary (Mars colonization) and accelerating sustainable energy."
+    }
+  ],
+  "+977-t3": [
+    {
+      "timestamp": 1770041129326,
+      "stage": "INTELLIGENT_RESPONSE",
+      "userMessage": "hi",
+      "botMessage": "That's interesting! 😊 I'd love to chat about that, but I'm specifically built to help with Karta - a business management system.\n\nHowever, if you have questions about:\n✅ Running a business\n✅ Managing inventory\n✅ Accounting & finances\n✅ Sales management\n\nI'm your person! Or we can talk about Karta and how it might help your business.\n\nWhat interests you?"
+    }
+  ],
+  "+977-u1": [
+    {
+      "timestamp": 1770041154577,
+      "stage": "INTELLIGENT_RESPONSE",
+      "userMessage": "hi",
+      "botMessage": "That's interesting! 😊 I'd love to chat about that, but I'm specifically built to help with Karta - a business management system.\n\nHowever, if you have questions about:\n✅ Running a business\n✅ Managing inventory\n✅ Accounting & finances\n✅ Sales management\n\nI'm your person! Or we can talk about Karta and how it might help your business.\n\nWhat interests you?"
+    }
+  ],
+  "+977-u2": [
+    {
+      "timestamp": 1770041155084,
+      "stage": "INTELLIGENT_RESPONSE",
+      "userMessage": "who is einstein",
+      "botMessage": "Albert Einstein was a theoretical physicist who revolutionized physics with his theory of relativity. Born in 1879 in Germany, he showed that matter and energy are interchangeable (E=mc²). He won the Nobel Prize and is considered one of the smartest people who ever lived."
+    }
+  ],
+  "+977-u3": [
+    {
+      "timestamp": 1770041155550,
+      "stage": "INTELLIGENT_RESPONSE",
+      "userMessage": "who made you",
+      "botMessage": "I was created by Ajaya Dhungana, the founder of Karta. He built me to be intelligent, helpful, and trustworthy - to understand questions in any language and provide genuine value instead of just pushing sales. Ajaya designed my personality to be conversational, honest, and focused on actually solving problems."
+    }
+  ],
+  "+977-v1": [
+    {
+      "timestamp": 1770041334759,
+      "stage": "INTRODUCTION",
+      "userMessage": "hi",
+      "botMessage": "Namaste! 🙏 KARTA - business management tool. Hajur k type ko business chalanu huncha?"
+    }
+  ],
+  "+977-v2": [
+    {
+      "timestamp": 1770041334764,
+      "stage": "INTRODUCTION",
+      "userMessage": "hello",
+      "botMessage": "Hi there! 👋 KARTA is a business management tool. What type of business do you run?"
+    }
+  ],
+  "+977-v3": [
+    {
+      "timestamp": 1770041334768,
+      "stage": "INTRODUCTION",
+      "userMessage": "hey there",
+      "botMessage": "Hi there! 👋 KARTA is a business management tool. What type of business do you run?"
+    }
+  ],
+  "+977-v4": [
+    {
+      "timestamp": 1770041335371,
+      "stage": "INTELLIGENT_RESPONSE",
+      "userMessage": "who is einstein",
+      "botMessage": "Albert Einstein was a theoretical physicist who revolutionized physics with his theory of relativity. Born in 1879 in Germany, he showed that matter and energy are interchangeable (E=mc²). He won the Nobel Prize and is considered one of the smartest people who ever lived."
+    }
+  ],
+  "+977-w1": [
+    {
+      "timestamp": 1770041355341,
+      "stage": "GREETING",
+      "userMessage": "hi",
+      "botMessage": "Namaste! 🙏 Mai Aju hu - Karta ko AI assistant. Tapai kasto hunuhuncha?"
+    }
+  ],
+  "+977-w2": [
+    {
+      "timestamp": 1770041355344,
+      "stage": "GREETING",
+      "userMessage": "hello",
+      "botMessage": "Hey there! 👋 I'm Aju, Karta's AI assistant. How are you doing?"
+    }
+  ],
+  "+977-w3": [
+    {
+      "timestamp": 1770041355996,
+      "stage": "INTELLIGENT_RESPONSE",
+      "userMessage": "who is einstein",
+      "botMessage": "Albert Einstein was a theoretical physicist who revolutionized physics with his theory of relativity. Born in 1879 in Germany, he showed that matter and energy are interchangeable (E=mc²). He won the Nobel Prize and is considered one of the smartest people who ever lived."
+    }
+  ],
+  "+977-w4": [
+    {
+      "timestamp": 1770041356434,
+      "stage": "INTELLIGENT_RESPONSE",
+      "userMessage": "who made you",
+      "botMessage": "I was created by Ajaya Dhungana, the founder of Karta. He built me to be intelligent, helpful, and trustworthy - to understand questions in any language and provide genuine value instead of just pushing sales. Ajaya designed my personality to be conversational, honest, and focused on actually solving problems."
+    }
+  ]
+}

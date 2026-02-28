@@ -1,0 +1,18 @@
+[
+  {
+    "instruction": "Skip",
+    "taskType": "shell",
+    "status": "error",
+    "timestamp": "2026-02-15T07:14:16.937Z",
+    "userPhone": "9779804265296@c.us",
+    "id": "exec_1771139656939_ay6s9kupm"
+  },
+  {
+    "instruction": "Kamaal hai by king",
+    "taskType": "shell",
+    "status": "error",
+    "timestamp": "2026-02-15T07:15:05.235Z",
+    "userPhone": "9779804265296@c.us",
+    "id": "exec_1771139705235_1ym59rosm"
+  }
+]
