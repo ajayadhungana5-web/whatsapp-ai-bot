@@ -38,7 +38,8 @@ class WhatsAppBot {
           '--disable-blink-features=AutomationControlled',
           '--ignore-certificate-errors'
         ],
-        executablePath: getChromePath(),
+        // The executablePath is removed so Puppeteer falls back to the .cache/puppeteer directory automatically
+        // executablePath: getChromePath(),
       },
       // webVersionCache: {
       //   type: 'remote',
