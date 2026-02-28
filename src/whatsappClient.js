@@ -11,33 +11,15 @@ function getChromePath() {
   // On Windows (local dev), use standard Chrome location
   if (process.platform === 'win32') return 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
 
-  // On Linux (Render), strictly point to the installed cache directory.
-  // We use string manipulation to find the exact binary path since Puppeteer's internal resolution fails on Render.
+  // On Linux/Mac, rely on Puppeteer's built-in path resolution.
+  // We configure Render to ensure this works via environment variables.
   try {
     const puppeteer = require('puppeteer');
-    const path = require('path');
-
-    // Attempt standard resolution first
-    const execPath = puppeteer.executablePath();
-    if (execPath && require('fs').existsSync(execPath)) {
-      return execPath;
-    }
-
-    // Explicit fallback to Render's known cache location
-    const renderCachePath = '/opt/render/project/src/.cache/puppeteer';
-    const fs = require('fs');
-
-    // Puppeteer installs into .cache/puppeteer/chrome/<os>-<version>/chrome-linux64/chrome
-    // We need to find the actual executable
-    if (fs.existsSync(renderCachePath)) {
-      return puppeteer.executablePath(); // It should find it now that we forced it here
-    }
+    return puppeteer.executablePath();
   } catch (error) {
     console.warn("Path resolution error:", error.message);
+    return undefined;
   }
-
-  // Final hail-mary for Render: explicitly return the exact path the error message says it's missing from
-  return '/opt/render/project/src/.cache/puppeteer/chrome/linux-145.0.7632.26/chrome-linux64/chrome';
 }
 
 class WhatsAppBot {
