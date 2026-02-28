@@ -9,8 +9,15 @@ function getChromePath() {
   if (process.env.CHROME_PATH) return process.env.CHROME_PATH;
   // On Windows (local dev), use standard Chrome location
   if (process.platform === 'win32') return 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
-  // Default to undefined on Linux/Mac so Puppeteer uses its bundled Chromium
-  return undefined;
+
+  // On Linux/Mac, rely on Puppeteer's built-in path resolution to find the downloaded browser
+  try {
+    const puppeteer = require('puppeteer');
+    return puppeteer.executablePath();
+  } catch (error) {
+    console.warn("Could not resolve puppeteer executablePath:", error.message);
+    return undefined;
+  }
 }
 
 class WhatsAppBot {
