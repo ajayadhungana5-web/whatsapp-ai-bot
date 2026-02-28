@@ -7,10 +7,10 @@ const config = require('../config/config');
 function getChromePath() {
   // Allow override via environment variable (useful for Render, Railway, etc.)
   if (process.env.CHROME_PATH) return process.env.CHROME_PATH;
-  // On Linux servers (Render.com, Ubuntu), use system chromium
-  if (process.platform === 'linux') return '/usr/bin/chromium-browser';
   // On Windows (local dev), use standard Chrome location
-  return 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
+  if (process.platform === 'win32') return 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
+  // Default to undefined on Linux/Mac so Puppeteer uses its bundled Chromium
+  return undefined;
 }
 
 class WhatsAppBot {
