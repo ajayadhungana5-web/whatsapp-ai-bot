@@ -3,14 +3,10 @@ services:
     name: whatsapp-ai-bot
     env: node
     plan: free
-    buildCommand: npm install && npx puppeteer browsers install chrome
+    buildCommand: bash render-build.sh
     startCommand: node src/server.js
     healthCheckPath: /
     envVars:
-      - key: PUPPETEER_CACHE_DIR
-        value: "/opt/render/project/src/.cache/puppeteer"
-      - key: XDG_CACHE_HOME
-        value: "/opt/render/project/src/.cache"
       - key: NODE_ENV
         value: production
       - key: PORT
