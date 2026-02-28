@@ -2,7 +2,7 @@ require('dotenv').config();
 
 module.exports = {
   ai: {
-    provider: process.env.AI_PROVIDER || 'openai',
+    provider: process.env.AI_PROVIDER || 'openrouter',
     openai: {
       apiKey: process.env.OPENAI_API_KEY,
       model: 'gpt-3.5-turbo',

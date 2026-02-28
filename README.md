@@ -1,10 +1,10 @@
 # 🤖 WhatsApp AI Bot
 
-An intelligent WhatsApp bot powered by Google Gemini AI that responds to messages automatically with a custom persona.
+An intelligent WhatsApp bot powered by OpenRouter (or Google Gemini/OpenAI) that responds to messages automatically with a custom persona.
 
 ## ✨ Features
 
-- 🤖 AI-powered replies (Google Gemini / OpenAI)
+- 🤖 AI-powered replies (OpenRouter / Google Gemini / OpenAI)
 - 🎙️ Voice Note support (transcription + audio replies)
 - 📊 Web-based Control Panel dashboard
 - 📢 Mass Outreach campaigns
@@ -22,7 +22,7 @@ An intelligent WhatsApp bot powered by Google Gemini AI that responds to message
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/YOUR_USERNAME/whatsapp-ai-bot.git
+git clone https://github.com/ajayadhungana5-web/whatsapp-ai-bot.git
 cd whatsapp-ai-bot
 
 # 2. Install dependencies
@@ -49,8 +49,9 @@ This bot is deployed on [Render.com](https://render.com) — a free cloud platfo
 3. Click **"New Web Service"** → connect your GitHub repo
 4. Render will auto-detect `render.yaml` and configure everything
 5. Add your secret environment variables in the Render dashboard:
-   - `GEMINI_API_KEY` — your Google Gemini API key
-   - `OPENROUTER_API_KEY` — (optional) OpenRouter key
+   - `OPENROUTER_API_KEY` — your OpenRouter API key
+   - `AI_PROVIDER` — set to `openrouter`
+   - *(Optional)* `GEMINI_API_KEY` — if using Gemini
 6. Click **Deploy**
 7. Visit the Render URL → click **"Start Bot"** → scan the QR code
 
@@ -60,9 +61,9 @@ This bot is deployed on [Render.com](https://render.com) — a free cloud platfo
 
 | Variable | Description | Required |
 |----------|-------------|----------|
-| `AI_PROVIDER` | `gemini` or `openai` | Yes |
+| `AI_PROVIDER` | `openrouter`, `gemini` or `openai` | Yes |
+| `OPENROUTER_API_KEY` | OpenRouter API key | If using OpenRouter |
 | `GEMINI_API_KEY` | Google Gemini API key | If using Gemini |
-| `OPENROUTER_API_KEY` | OpenRouter API key | If using OpenAI |
 | `AUTO_REPLY_ENABLED` | Enable auto-replies (`true`/`false`) | No |
 | `RESPONSE_TIMEOUT` | AI timeout in ms | No |
 | `LOG_LEVEL` | Logging level (`info`/`debug`) | No |
