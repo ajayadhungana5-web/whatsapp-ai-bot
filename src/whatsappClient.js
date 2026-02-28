@@ -53,19 +53,8 @@ class WhatsAppBot {
     this.aiProvider = new AIProvider();
 
     // Initialize Executor Mode (Strongest God Mode)
-    // Initialize Executor Mode (Strongest God Mode)
-    const GodModeExecutor = require('./godModeExecutor');
-    this.godModeExecutor = new GodModeExecutor(this.aiProvider, this);
-
-    // Track executor mode per user (for structured instruction execution)
-    this.executorModeStates = new Map(); // phoneNumber -> isActive
-    // Track Owner Mode state per user (for admin testing as boss/client)
-    this.ownerModeStates = new Map();
-
     // DEDUP: Track processed message IDs to prevent duplicate replies
     this.processedMsgIds = new Set();
-
-    console.log('[GodModeExecutor] ⚡ Instruction Executor System (GOD MODE) Initialized');
 
     this.setupEventHandlers();
     this.qrCodeReceived = false;
@@ -310,7 +299,7 @@ class WhatsAppBot {
           try {
             const contact = await msg.getContact();
             const senderName = contact.pushname || contact.name || "Friend";
-            const isOwnerMode = this.ownerModeStates.get(msg.from) || false;
+            const isOwnerMode = false; // Owner mode disabled in pure sales version
 
             console.log(`[VoiceMode] 🎙️ Processing Voice Note from ${senderName}...`);
 
@@ -399,110 +388,9 @@ class WhatsAppBot {
       const senderName = contact.pushname || contact.name || "friend";
       const message = msg.body;
 
-      // 0. God Mode Check (Direct Execution for Admin)
-      const adminNumber = '9779804265296';
+      // 0. God Mode Check Removed - Bot operates purely as a sales Assistant
 
-      // Allow Owner Mode Toggle for Admin
-      if (msg.from.includes(adminNumber)) {
-        const msgLower = message.toLowerCase().trim();
-
-        if (msgLower === 'owner mode on') {
-          this.ownerModeStates.set(msg.from, true);
-          await this.safeReply(msg, '🫡 **Owner Mode ACTIVATED**.\nI will now treat you as my creator. Commands are enabled.');
-          return;
-        }
-        if (msgLower === 'owner mode off') {
-          this.ownerModeStates.delete(msg.from);
-          await this.safeReply(msg, '💼 **Owner Mode DEACTIVATED**.\nI will now treat you as a customer (Sales Mode). Testing enabled.');
-          return;
-        }
-      }
-
-      if (msg.from.includes(adminNumber)) {
-        const msgLower = message.toLowerCase().trim();
-
-        // Check for GOD MODE activation (Structured Instruction Execution)
-        if (msgLower.includes('god mode start') || msgLower === 'god mode on' || msgLower.includes('executor mode start') || msgLower === 'executor mode on') {
-          console.log(`[GodModeExecutor] ⚡ GOD MODE activation request from ${msg.from}`);
-          const chat = await msg.getChat();
-          await chat.sendStateTyping();
-
-          try {
-            this.executorModeStates.set(msg.from, true);
-            const initMessage = `🤖 *GOD MODE ACTIVATED*\n\n` +
-              `I can now understand and execute ANY instruction you give me:\n\n` +
-              `📝 *Code Generation:* "Create a Python script that..."\n` +
-              `📡 *API Calls:* "Call OpenRouter API to..."\n` +
-              `🖥️ *System Commands:* "Run these terminal commands..."\n` +
-              `📊 *Data Processing:* "Process this CSV file by..."\n` +
-              `🔗 *Workflows:* "Execute these steps in sequence..."\n\n` +
-              `Every instruction → Parsed Intent → Machine-Actionable Output → Ready to Execute\n\n` +
-              `Send any instruction now!`;
-
-            await this.safeReply(msg, initMessage);
-            console.log(`[GodModeExecutor] ✅ GOD MODE activated for ${msg.from}`);
-            return;
-          } catch (error) {
-            console.error(`[GodModeExecutor] ❌ Activation failed:`, error);
-            await this.safeReply(msg, `⚠️ Failed to activate GOD MODE: ${error.message}`);
-            return;
-          }
-        }
-
-        // Check for GOD MODE deactivation
-        if (msgLower.includes('god mode stop') || msgLower === 'god mode off' || msgLower.includes('executor mode stop') || msgLower === 'executor mode off') {
-          console.log(`[GodModeExecutor] ⚡ GOD MODE deactivation request from ${msg.from}`);
-          const chat = await msg.getChat();
-          await chat.sendStateTyping();
-
-          try {
-            this.executorModeStates.delete(msg.from);
-            const shutdownMessage = `⚡ GOD MODE Deactivated\n\nBack to normal mode.`;
-
-            await this.safeReply(msg, shutdownMessage);
-            console.log(`[GodModeExecutor] ✅ GOD MODE deactivated for ${msg.from}`);
-            return;
-          } catch (error) {
-            console.error(`[GodModeExecutor] ❌ Deactivation failed:`, error);
-            await this.safeReply(msg, `⚠️ Error deactivating GOD MODE: ${error.message}`);
-            return;
-          }
-        }
-
-        // Check if GOD MODE is active for this user
-        const isGodModeActive = this.executorModeStates.get(msg.from);
-
-        if (isGodModeActive) {
-          // Route to GOD MODE - Parse AND Execute instruction automatically
-          console.log(`[GodMode] 🚀 Full execution flow: "${message}"`);
-          const chat = await msg.getChat();
-          await chat.sendStateTyping();
-
-          try {
-            // Parse instruction → Execute automatically → Return result
-            const executionResult = await this.godModeExecutor.executeInstruction(
-              message,
-              `WhatsApp from ${msg.from}`,
-              msg.from
-            );
-
-            // Format result for WhatsApp and send
-            const formattedMessage = this.godModeExecutor.formatForWhatsApp(executionResult);
-            await this.safeReply(msg, formattedMessage);
-
-            console.log(`[GodMode] ✨ Execution complete - status: ${executionResult.status}`);
-            return;
-
-          } catch (error) {
-            console.error(`[GodMode] ❌ Error:`, error.message);
-            await this.safeReply(msg, `⚠️ GOD MODE Error: ${error.message}`);
-            return;
-          }
-        }
-      }
-
-      // Check Owner Mode state (Defaults to FALSE)
-      const isOwnerMode = this.ownerModeStates.get(msg.from) || false;
+      const isOwnerMode = false; // Hardcoded to false for pure Sales Mode
       console.log(`[DEBUG] AI Request - Sender: ${msg.from}, OwnerMode: ${isOwnerMode}`);
 
       // Route to AI Provider directly
