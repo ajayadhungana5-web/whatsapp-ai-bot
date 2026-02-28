@@ -21,16 +21,18 @@ module.exports = {
     },
     openRouter: {
       apiKey: process.env.OPENROUTER_API_KEY,
-      model: 'stepfun/step-3.5-flash:free',
+      model: 'arcee-ai/trinity-large-preview:free',
     },
     openRouterBackup: {
       apiKey: process.env.OPENROUTER_BACKUP_API_KEY,
       // List of models to try in order if one fails
       models: [
-        'arcee-ai/trinity-large-preview:free',
-        'deepseek/deepseek-r1:free',
-        'meta-llama/llama-3.3-70b-instruct:free',
-        'openrouter/free',
+        'nvidia/nemotron-nano-9b-v2:free',
+        'nvidia/nemotron-nano-12b-v2-vl:free',
+        'openai/gpt-oss-120b:free',
+        'arcee-ai/trinity-mini:free',
+        'nvidia/nemotron-3-nano-30b-a3b:free',
+        'stepfun/step-3.5-flash:free',
       ],
     },
 
