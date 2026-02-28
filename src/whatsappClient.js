@@ -11,10 +11,47 @@ function getChromePath() {
   // On Windows (local dev), use standard Chrome location
   if (process.platform === 'win32') return 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
 
-  // On Linux/Mac, rely on Puppeteer's built-in path resolution.
-  // We configure Render to ensure this works via environment variables.
+  // On Linux (Render), actively scan the filesystem for the downloaded binary
   try {
     const puppeteer = require('puppeteer');
+    const fs = require('fs');
+    const path = require('path');
+
+    // 1. First checking Puppeteer's native resolution
+    try {
+      const execPath = puppeteer.executablePath();
+      if (execPath && fs.existsSync(execPath)) {
+        console.log("Found Chrome via native puppeteer resolution at:", execPath);
+        return execPath;
+      }
+    } catch (e) { } // Ignore error if native resolution throws
+
+    console.log("Native resolution failed or path does not exist. Scanning filesystem dynamically...");
+
+    // 2. Scan possible cache directories aggressively
+    const possibleCacheDirs = [
+      path.join(process.cwd(), '.cache', 'puppeteer', 'chrome'),
+      '/opt/render/project/src/.cache/puppeteer/chrome',
+      path.join(__dirname, '..', '.cache', 'puppeteer', 'chrome')
+    ];
+
+    for (const baseDir of possibleCacheDirs) {
+      if (fs.existsSync(baseDir)) {
+        console.log(`Scanning base directory: ${baseDir}`);
+        const subDirs = fs.readdirSync(baseDir);
+        for (const subDir of subDirs) {
+          // Typically looks like /linux-145.0.7632.26/chrome-linux64/chrome
+          const binaryPath = path.join(baseDir, subDir, 'chrome-linux64', 'chrome');
+          if (fs.existsSync(binaryPath)) {
+            console.log(`SUCCESS: Dynamically found Chrome binary at: ${binaryPath}`);
+            return binaryPath;
+          }
+        }
+      }
+    }
+
+    console.error("CRITICAL: Scanned all potential cache directories but Chrome was not found anywhere.");
+    // Fallback so it doesn't crash here, it will crash when Puppeteer tries to use it but we'll get logs
     return puppeteer.executablePath();
   } catch (error) {
     console.warn("Path resolution error:", error.message);
