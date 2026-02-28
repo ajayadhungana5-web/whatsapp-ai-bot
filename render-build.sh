@@ -18,4 +18,10 @@ echo "Verifying Chrome was installed..."
 ls -la "$PUPPETEER_CACHE_DIR/chrome/" || echo "WARNING: Chrome directory not found!"
 find "$PUPPETEER_CACHE_DIR" -name "chrome" -type f || echo "WARNING: Chrome binary not found!"
 
+echo "Ensuring logs directory exists..."
+mkdir -p logs
+
+echo "Making Chrome binary executable..."
+find "$PUPPETEER_CACHE_DIR" -name "chrome" -type f -exec chmod +x {} \;
+
 echo "Build complete!"

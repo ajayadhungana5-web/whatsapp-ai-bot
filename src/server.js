@@ -846,6 +846,61 @@ app.listen(PORT, () => {
 
     loadConfig();
     logEvent('Control panel server started', 'info');
+
+    // Auto-start bot in production (Render)
+    if (process.env.NODE_ENV === 'production' && !botState.running) {
+        console.log('🤖 Production mode: Auto-starting bot...');
+
+        const logsDir = path.join(__dirname, '../logs');
+        if (!fs.existsSync(logsDir)) {
+            fs.mkdirSync(logsDir, { recursive: true });
+        }
+        const logStream = fs.createWriteStream(path.join(logsDir, 'bot.log'), { flags: 'a' });
+
+        botProcess = spawn('node', ['src/index.js'], {
+            cwd: path.join(__dirname, '..'),
+            env: { ...process.env },
+            stdio: ['inherit', 'pipe', 'pipe', 'ipc']
+        });
+
+        botProcess.stdout.pipe(logStream);
+        botProcess.stderr.pipe(logStream);
+        botProcess.stdout.pipe(process.stdout);
+        botProcess.stderr.pipe(process.stderr);
+
+        botState.running = true;
+        botState.startTime = Date.now();
+        botState.pid = botProcess.pid;
+
+        const child = botProcess;
+        botProcess.on('exit', (code) => {
+            console.log(`Bot process exited with code ${code}`);
+            if (botProcess === child) {
+                botState.running = false;
+                botState.whatsappConnected = false;
+                botState.pid = null;
+                botProcess = null;
+                logEvent(`Bot auto-start process stopped (exit code: ${code})`, 'info');
+            }
+        });
+
+        botProcess.on('message', (msg) => {
+            if (msg.type === 'message-received') {
+                const { from } = msg;
+                botState.messageCount++;
+                if (from) {
+                    if (!Array.isArray(botState.activeUsers)) botState.activeUsers = [];
+                    if (!botState.activeUsers.includes(from)) {
+                        botState.activeUsers.push(from);
+                        if (botState.activeUsers.length > 1000) botState.activeUsers.shift();
+                    }
+                    saveConfig();
+                }
+            }
+        });
+
+        logEvent('Bot auto-started in production mode', 'success');
+    }
 });
 
 module.exports = app;

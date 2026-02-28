@@ -11,13 +11,38 @@ function getChromePath() {
   // On Windows (local dev), use standard Chrome location
   if (process.platform === 'win32') return 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
 
-  // On Linux (Render), rely on Puppeteer's native runtime resolution.
-  // We guarantee the browser exists by running `npx puppeteer browsers install chrome` in the startCommand.
+  // On Linux (Render), find Chrome in the custom cache directory.
+  // puppeteer.executablePath() resolves to ~/.cache/puppeteer which Render wipes,
+  // so we search PUPPETEER_CACHE_DIR directly.
+  const cacheDir = process.env.PUPPETEER_CACHE_DIR || '/opt/render/project/src/.cache/puppeteer';
   try {
+    const fs = require('fs');
+    const pathMod = require('path');
+    const findChrome = (dir) => {
+      if (!fs.existsSync(dir)) return null;
+      const entries = fs.readdirSync(dir, { withFileTypes: true });
+      for (const entry of entries) {
+        const fullPath = pathMod.join(dir, entry.name);
+        if (entry.isFile() && entry.name === 'chrome') return fullPath;
+        if (entry.isDirectory()) {
+          const found = findChrome(fullPath);
+          if (found) return found;
+        }
+      }
+      return null;
+    };
+    const chromePath = findChrome(cacheDir);
+    if (chromePath) {
+      console.log(`[Chrome] Found at: ${chromePath}`);
+      return chromePath;
+    }
+    // Fallback to puppeteer's own resolution
     const puppeteer = require('puppeteer');
-    return puppeteer.executablePath();
+    const fallback = puppeteer.executablePath();
+    console.log(`[Chrome] Fallback path: ${fallback}`);
+    return fallback;
   } catch (error) {
-    console.warn("Path resolution error:", error.message);
+    console.warn("Chrome path resolution error:", error.message);
     return undefined;
   }
 }
