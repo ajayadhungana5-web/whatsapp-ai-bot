@@ -11,13 +11,27 @@ function getChromePath() {
   // On Windows (local dev), use standard Chrome location
   if (process.platform === 'win32') return 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
 
-  // On Linux (Render), find Chrome in the custom cache directory.
-  // puppeteer.executablePath() resolves to ~/.cache/puppeteer which Render wipes,
-  // so we search PUPPETEER_CACHE_DIR directly.
-  const cacheDir = process.env.PUPPETEER_CACHE_DIR || '/opt/render/project/src/.cache/puppeteer';
+  const fs = require('fs');
+  const pathMod = require('path');
+
+  // Strategy 1: Read the path saved during Render build
   try {
-    const fs = require('fs');
-    const pathMod = require('path');
+    const savedPathFile = '/opt/render/project/src/.chrome-path';
+    if (fs.existsSync(savedPathFile)) {
+      const savedPath = fs.readFileSync(savedPathFile, 'utf8').trim();
+      if (savedPath && fs.existsSync(savedPath)) {
+        console.log(`[Chrome] Using saved build path: ${savedPath}`);
+        return savedPath;
+      }
+      console.warn(`[Chrome] Saved path exists but Chrome not found at: ${savedPath}`);
+    }
+  } catch (e) {
+    console.warn('[Chrome] Error reading saved path:', e.message);
+  }
+
+  // Strategy 2: Search the custom cache directory recursively
+  const cacheDir = process.env.PUPPETEER_CACHE_DIR || '/opt/render/project/src/puppeteer-cache';
+  try {
     const findChrome = (dir) => {
       if (!fs.existsSync(dir)) return null;
       const entries = fs.readdirSync(dir, { withFileTypes: true });
@@ -33,10 +47,22 @@ function getChromePath() {
     };
     const chromePath = findChrome(cacheDir);
     if (chromePath) {
-      console.log(`[Chrome] Found at: ${chromePath}`);
+      console.log(`[Chrome] Found via search: ${chromePath}`);
       return chromePath;
     }
-    // Fallback to puppeteer's own resolution
+    console.warn(`[Chrome] Not found in cache dir: ${cacheDir}`);
+    // Log what IS in the cache dir for debugging
+    if (fs.existsSync(cacheDir)) {
+      console.log(`[Chrome] Cache dir contents:`, fs.readdirSync(cacheDir));
+    } else {
+      console.warn(`[Chrome] Cache dir does not exist: ${cacheDir}`);
+    }
+  } catch (e) {
+    console.warn('[Chrome] Search error:', e.message);
+  }
+
+  // Strategy 3: Fallback to puppeteer's own resolution
+  try {
     const puppeteer = require('puppeteer');
     const fallback = puppeteer.executablePath();
     console.log(`[Chrome] Fallback path: ${fallback}`);
