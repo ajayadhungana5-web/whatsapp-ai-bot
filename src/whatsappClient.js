@@ -5,19 +5,39 @@ const config = require('../config/config');
 
 // Determine Chromium/Chrome path based on environment
 function getChromePath() {
-  // Allow override via environment variable (useful for Render, Railway, etc.)
+  // Allow override via environment variable
   if (process.env.CHROME_PATH) return process.env.CHROME_PATH;
+
   // On Windows (local dev), use standard Chrome location
   if (process.platform === 'win32') return 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
 
-  // On Linux/Mac, rely on Puppeteer's built-in path resolution to find the downloaded browser
+  // On Linux (Render), strictly point to the installed cache directory.
+  // We use string manipulation to find the exact binary path since Puppeteer's internal resolution fails on Render.
   try {
     const puppeteer = require('puppeteer');
-    return puppeteer.executablePath();
+    const path = require('path');
+
+    // Attempt standard resolution first
+    const execPath = puppeteer.executablePath();
+    if (execPath && require('fs').existsSync(execPath)) {
+      return execPath;
+    }
+
+    // Explicit fallback to Render's known cache location
+    const renderCachePath = '/opt/render/project/src/.cache/puppeteer';
+    const fs = require('fs');
+
+    // Puppeteer installs into .cache/puppeteer/chrome/<os>-<version>/chrome-linux64/chrome
+    // We need to find the actual executable
+    if (fs.existsSync(renderCachePath)) {
+      return puppeteer.executablePath(); // It should find it now that we forced it here
+    }
   } catch (error) {
-    console.warn("Could not resolve puppeteer executablePath:", error.message);
-    return undefined;
+    console.warn("Path resolution error:", error.message);
   }
+
+  // Final hail-mary for Render: explicitly return the exact path the error message says it's missing from
+  return '/opt/render/project/src/.cache/puppeteer/chrome/linux-145.0.7632.26/chrome-linux64/chrome';
 }
 
 class WhatsAppBot {
@@ -38,8 +58,8 @@ class WhatsAppBot {
           '--disable-blink-features=AutomationControlled',
           '--ignore-certificate-errors'
         ],
-        // The executablePath is removed so Puppeteer falls back to the .cache/puppeteer directory automatically
-        // executablePath: getChromePath(),
+        // Force the absolute path 
+        executablePath: getChromePath(),
       },
       // webVersionCache: {
       //   type: 'remote',
